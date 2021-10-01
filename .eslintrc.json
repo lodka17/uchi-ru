@@ -1,0 +1,222 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:react/recommended",
+    "plugin:promise/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "promise",
+    "prettier"
+  ],
+  "settings": {
+    "import/extensions": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx"
+    ],
+    "import/parsers": {
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  },
+  "rules": {
+    "no-duplicate-imports": [
+      "error",
+      {
+        "includeExports": true
+      }
+    ],
+    "no-template-curly-in-string": "error",
+    "block-scoped-var": "error",
+    "curly": [
+      "error",
+      "all"
+    ],
+    "eqeqeq": "error",
+    "max-classes-per-file": [
+      "error",
+      1
+    ],
+    "no-alert": "warn",
+    "no-console": "warn",
+    "no-else-return": [
+      "error",
+      {
+        "allowElseIf": false
+      }
+    ],
+    "no-implicit-coercion": "off",
+    "no-labels": "error",
+    "no-lone-blocks": "error",
+    "no-multi-spaces": "error",
+    "no-new": "error",
+    "no-new-func": "error",
+    "no-new-wrappers": "error",
+    "no-return-await": "error",
+    "no-self-compare": "error",
+    "no-sequences": "error",
+    "no-throw-literal": "error",
+    "no-unused-expressions": "error",
+    "no-useless-call": "error",
+    "no-useless-concat": "error",
+    "no-useless-return": "error",
+    "prefer-promise-reject-errors": "error",
+    "radix": "error",
+    "no-undefined": "error",
+    "array-bracket-newline": [
+      "error",
+      {
+        "multiline": true
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
+    "comma-style": "error",
+    "eol-last": "error",
+    "key-spacing": "error",
+    "keyword-spacing": "error",
+    "new-parens": "error",
+    "no-bitwise": "warn",
+    "no-lonely-if": "warn",
+    "no-multiple-empty-lines": "error",
+    "no-nested-ternary": "error",
+    "no-new-object": "error",
+    "no-tabs": [
+      "error",
+      {
+        "allowIndentationTabs": true
+      }
+    ],
+    "no-trailing-spaces": "error",
+    "no-unneeded-ternary": "error",
+    "no-whitespace-before-property": "error",
+    "object-curly-newline": "error",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "semi-spacing": "error",
+    "space-before-blocks": "error",
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "space-in-parens": "error",
+    "space-infix-ops": "error",
+    "space-unary-ops": [
+      2,
+      {
+        "words": false,
+        "nonwords": true
+      }
+    ],
+    "spaced-comment": [
+      "error",
+      "always"
+    ],
+    "switch-colon-spacing": "error",
+    "arrow-body-style": [
+      "error",
+      "as-needed"
+    ],
+    "arrow-parens": [
+      "error",
+      "always",
+      {
+        "requireForBlockBody": true
+      }
+    ],
+    "arrow-spacing": "error",
+    "generator-star-spacing": [
+      "error",
+      "after"
+    ],
+    "no-confusing-arrow": "error",
+    "no-useless-computed-key": "error",
+    "no-useless-rename": "error",
+    "object-shorthand": [
+      "error",
+      "always"
+    ],
+    "prefer-arrow-callback": "warn",
+    "prefer-destructuring": "error",
+    "rest-spread-spacing": [
+      "error",
+      "never"
+    ],
+    "sort-imports": "off",
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "never",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "template-curly-spacing": "error",
+    "promise/prefer-await-to-then": "error",
+    "promise/always-return": "off",
+    "semi": "off",
+    "no-shadow": "off",
+    "no-extra-parens": "off",
+    "react/display-name": "off",
+    "react/no-access-state-in-setstate": "error",
+    "react/no-danger": "error",
+    "react/no-multi-comp": "error",
+    "react/no-this-in-sfc": "error",
+    "react/prefer-stateless-function": "error",
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/jsx-no-bind": "off",
+    "react/jsx-no-literals": [
+      1,
+      {
+        "noStrings": true,
+        "allowedStrings": [
+          "allowed"
+        ],
+        "ignoreProps": true,
+        "noAttributeStrings": true
+      }
+    ],
+    "react/jsx-no-useless-fragment": "error",
+    "react/jsx-pascal-case": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}

@@ -1,12 +1,7 @@
 import React from "react";
+import "./App.scss";
 import { StartingForm } from "./components/StartingForm/StartingForm";
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <StartingForm />
-    </div>
-  );
-};
+const App = () => <StartingForm />;
 
 export default App;
