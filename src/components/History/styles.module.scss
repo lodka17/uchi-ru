@@ -1,0 +1,99 @@
+.history {
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        width: calc(100% - 60px);
+        height: 100%;
+    }
+
+    .table {
+        display: grid;
+        grid-template-columns: 1fr;
+        border-radius: 7px;
+        border: 1px solid #d2d8e2;
+        box-sizing: border-box;
+
+        .row:first-child{
+            background-color: #F2F5F9;
+            color: #2D2F33;
+            font-size: 16px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 480px 1fr 75px;
+            grid-column-gap: 30px;
+            padding: 20px 50px;
+            border: 1px solid #d2d8e2;
+            border-top: none;
+            color: #5A7494;
+            font-size: 14px;
+
+            b{
+                color: #2D2F33;
+                font-size: 16px;
+            }
+
+            .question[aria-label]:after {
+                opacity: 0;
+                content: attr(aria-label);
+                padding: 4px 8px;
+                position: absolute;
+                max-width: 360px;
+                left: 0;
+                top: 100%;
+                z-index: 20;
+                background: #383838;
+                color: #ffffff;
+                transition: opacity 0.5s;
+                pointer-events: none;
+                font-size: 11px;
+                line-height: 16px;
+                padding: 4px 8px;
+                border-radius: 6px;
+            }
+
+            .question[aria-label]:hover:after {
+                opacity: 1;
+            }
+
+            .question {
+                position: relative;
+
+                span {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    position: relative;
+                    max-width: 480px;
+                    display: block;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        width: 50px;
+                        background: linear-gradient(270deg, #ffffff 50%, rgba(255, 255, 255, 0) 108.33%);
+                    }
+                }
+            }
+
+            .status{
+                border-radius: 12px;
+                border: 1px solid #D2D8E2;
+                font-size: 13px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
