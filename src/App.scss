@@ -82,10 +82,7 @@ a {
 abbr[title] {
     border-bottom: none;
     /* 1 */
-    text-decoration: underline;
-    /* 2 */
-    text-decoration: underline dotted;
-    /* 2 */
+    text-decoration: none;
 }
 
 /**
@@ -415,3 +412,94 @@ select {
 
 /* Remove all animations and transitions for people that prefer not to see them */
 /*! CSS RESET END  */
+.react-daterange-picker__inputGroup,
+.react-daterange-picker__range-divider,
+.react-daterange-picker__clear-button {
+    display: none !important;
+}
+
+.react-daterange-picker__wrapper {
+    border: none !important;
+}
+
+.react-daterange-picker__calendar-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px !important;
+    color: #5a7494;
+    border: 1px solid #d2d8e2 !important;
+    border-radius: 4px;
+    transition: 0.2s linear;
+
+    svg {
+        stroke: #5a7494;
+        transition: 0.2s linear;
+    }
+
+    &::before {
+        content: "Фильтр";
+        display: block;
+        margin-right: 8px;
+    }
+
+    &:hover {
+        background-color: #ada0e7;
+        color: #fff;
+
+        svg {
+            stroke: #fff !important;
+        }
+    }
+}
+
+.react-calendar__tile--now {
+    background-color: #fff !important;
+
+    &:hover {
+        background-color: #e6e6e6 !important;
+    }
+}
+
+.react-calendar__tile--active {
+    background-color: #e8e2ff !important;
+    color: #000 !important;
+}
+
+.react-calendar__tile--rangeStart {
+    border: 2px solid #7661d7 !important;
+    box-sizing: border-box;
+    border-radius: 4px 0px 0px 4px !important;
+}
+
+.react-calendar__tile--rangeEnd {
+    border: 2px solid #7661d7 !important;
+    box-sizing: border-box;
+    border-radius: 0px 4px 4px 0px !important;
+}
+
+.react-calendar__month-view__days__day--weekend {
+    color: #000 !important;
+}
+
+.react-calendar__tile {
+    transition: 0.1s linear !important;
+}
+
+.react-calendar {
+    border-radius: 4px;
+    border: none !important;
+    filter: drop-shadow(0px -1.5px 6px rgba(0, 0, 0, 0.06)) drop-shadow(0px 0.6px 1.8px rgba(0, 0, 0, 0.1))
+        drop-shadow(0px 3.2px 7.2px rgba(0, 0, 0, 0.14));
+}
+
+.react-daterange-picker--open {
+    .react-daterange-picker__calendar-button {
+        background-color: #ada0e7;
+        color: #fff;
+
+        svg {
+            stroke: #fff !important;
+        }
+    }
+}

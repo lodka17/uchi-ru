@@ -1,8 +1,10 @@
-import React from 'react'
+import DateRangePicker from '@wojtekmaj/react-daterange-picker';
+import React, { useState } from 'react'
 import styles from "./styles.module.scss";
 
 const title = 'Ты помог ответить на 20 вопросов',
     notice = 'Уведомления',
+    noticeNumber = '5',
     subtitle = 'История'
 
 const historyTitles = [
@@ -25,6 +27,7 @@ const historyTitles = [
 
 const tabel = [
     {
+        link: '',
         date: '20.05.2020',
         dateTime: '14:47',
         subject: 'Всеобщая история',
@@ -33,6 +36,7 @@ const tabel = [
         status: 'Пятёрочка',
     },
     {
+        link: '',
         date: '20.05.2020',
         dateTime: '14:47',
         subject: 'Всеобщая история',
@@ -41,6 +45,7 @@ const tabel = [
         status: 'Пятёрочка',
     },
     {
+        link: '',
         date: '20.05.2020',
         dateTime: '14:47',
         subject: 'Всеобщая история',
@@ -49,6 +54,7 @@ const tabel = [
         status: 'Пятёрочка',
     },
     {
+        link: '',
         date: '20.05.2020',
         dateTime: '14:47',
         subject: 'Всеобщая история',
@@ -57,6 +63,7 @@ const tabel = [
         status: 'Пятёрочка',
     },
     {
+        link: '',
         date: '20.05.2020',
         dateTime: '14:47',
         subject: 'Всеобщая история',
@@ -65,6 +72,7 @@ const tabel = [
         status: 'Пятёрочка',
     },
     {
+        link: '',
         date: '20.05.2020',
         dateTime: '14:47',
         subject: 'Всеобщая история',
@@ -73,6 +81,7 @@ const tabel = [
         status: 'Пятёрочка',
     },
     {
+        link: '',
         date: '20.05.2020',
         dateTime: '14:47',
         subject: 'Всеобщая история',
@@ -83,19 +92,24 @@ const tabel = [
 ]
 
 export const History = () => {
-    console.log('a')
+    const [value, onChange] = useState([new Date(), new Date()]);
+    // Fri Oct 01 2021 00:00:00 GMT+0200 (Центральная Европа, летнее время)
+    // Fri Oct 22 2021 23:59:59 GMT+0200 (Центральная Европа, летнее время)
+
     return (
         <main className={styles.history}>
             <div className={styles.container}>
                 <div className={styles.flex}>
                     <h1>{title}</h1>
-                    <a href="#">{notice}</a>
+                    <a href="#" className={styles.noticeLink}>{notice} <span>{noticeNumber}</span></a>
                 </div>
                 <div className={styles.flex}>
                     <h2>{subtitle}</h2>
-                    <select>
-                        <option value="1">1</option>
-                    </select>
+                    <div className={styles.datepicker}>
+                        <DateRangePicker
+                            onChange={onChange}
+                            value={value} />
+                    </div>
                 </div>
                 <div className={styles.table}>
                     <div className={styles.row}>
@@ -107,15 +121,16 @@ export const History = () => {
                     </div>
                     {
                         tabel.map((el) => (
-                            <div className={styles.row} key={el}>
+                            <a href={el.link} className={styles.row} key={el}>
                                 <div>
-                                    <b>{el.date}</b> в {el.dateTime}
+                                    <b>{el.date}</b>{' в '}{el.dateTime}
                                 </div>
                                 <div>
                                     {el.subject}
                                 </div>
-                                <div aria-label={el.question} className={styles.question}>
+                                <div className={styles.question}>
                                     <span>{el.question}</span>
+                                    <div className={styles.tooltip}>{el.question}</div>
                                 </div>
                                 <div>
                                     {el.answer}
@@ -123,7 +138,7 @@ export const History = () => {
                                 <div className={styles.status}>
                                     {el.status}
                                 </div>
-                            </div>
+                            </a>
                         ))
                     }
                 </div>
