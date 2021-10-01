@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.scss";
-import { StartingForm } from "./components/StartingForm/StartingForm";
+import { History } from "./components/History/History";
+// import { StartingForm } from "./components/StartingForm/StartingForm";
 
-const App = () => <StartingForm />;
+const App = () => <History />;
 
 export default App;
