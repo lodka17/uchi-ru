@@ -7,6 +7,7 @@ import { Commands } from "../Commands/Comands";
 import { Help } from "../Help/Help";
 import { Questions } from "../Questions/Questions";
 import { StartingForm } from "../StartingForm";
+import { Shop } from "../Shop/Shop";
 
 export const Routing = () => (
   <Switch>
@@ -23,7 +24,7 @@ export const Routing = () => (
       <Commands />
     </Route>
     <Route exact path="/store">
-      <div>Магазин</div>
+      <Shop />
     </Route>
     <Route exact path="/archive">
       <div>Архив</div>
