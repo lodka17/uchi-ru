@@ -1,5 +1,8 @@
+import PropTypes from "prop-types";
 import React from "react";
 import key from "weak-key";
+import bellSvg from "./images/bell.svg";
+import headephoneSvg from "./images/headphone.svg";
 import styles from "./styles.module.scss";
 
 const navLeft = [
@@ -23,16 +26,20 @@ const navLeft = [
 
 const NavRight = [
   {
-    name: "Чат",
-    link: "",
+    title: "Чат",
+    name: "chat",
+    link: "headephoneSvg",
+    svg: headephoneSvg,
   },
   {
-    name: "Помощь",
+    title: "Помощь",
+    name: "help",
     link: "",
+    svg: bellSvg,
   },
 ];
 
-export const Header = () => (
+export const Header = ({ showMark }) => (
   <header className={styles.header}>
     <div className={styles.container}>
       <div className={styles.flex}>
@@ -49,7 +56,11 @@ export const Header = () => (
           <ul className={styles.list}>
             {NavRight.map((el) => (
               <li className={styles.right} key={key(el)}>
-                <a href={el.link}>{el.name}</a>
+                <a href={el.link}>{el.title}</a>
+                <div className={styles.icon}>
+                  {showMark && el.name === "help" && <span className={styles.mark}></span>}
+                  <img src={el.svg} />
+                </div>
               </li>
             ))}
           </ul>
@@ -58,3 +69,7 @@ export const Header = () => (
     </div>
   </header>
 );
+
+Header.propTypes = {
+  showMark: PropTypes.bool,
+};

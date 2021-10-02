@@ -10,7 +10,7 @@ import { Header } from "./components/Header/Header";
 //   <History />
 const App = () => (
   <div className="App">
-    <Header />
+    <Header showMark={true} />
     <RegistrationBL />
   </div>
 );

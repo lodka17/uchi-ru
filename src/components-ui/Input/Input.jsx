@@ -9,7 +9,6 @@ import "./Input.scss";
 export const Input = React.memo(({ title, className, hat, ...rest }) => {
   const classes = clsx("input", className, { "disabled": rest.disabled }, { hat });
   const id = key({ key: `input-${Date.now()}` });
-  console.log(hat, hat && "hello");
   return (
     <label htmlFor={id} className={classes}>
       {title && <span className="input__title">{title}</span>}
