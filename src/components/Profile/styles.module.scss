@@ -1,0 +1,84 @@
+@import "../../styles/globalStyles.scss";
+
+.profile {
+  width: 100%;
+  height: 100%;
+  padding: 48px 64px;
+  align-items: center;
+  background-color: white;
+  font-family: Montserrat-Regular;
+  width: 100%;
+
+  .data {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 72px;
+    margin-bottom: 74px;
+  }
+  .title {
+    font-family: Montserrat-Bold;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .statistic {
+    display: flex;
+    width: 195px;
+    height: 72px;
+    background-color: $lightGray;
+    padding: 24px;
+    justify-content: space-between;
+    font-size: 16px;
+    border-radius: 8px;
+
+    span:last-child {
+      color: $uiGrass_100;
+    }
+  }
+
+  .awards {
+    position: relative;
+  }
+
+  .command {
+    align-items: center;
+    img {
+      width: 72px;
+      height: 72px;
+    }
+    p {
+      color: $txtSecondary_1;
+      font-weight: 600;
+    }
+  }
+
+  .progress {
+    width: 100%;
+    margin-bottom: 109px;
+  }
+
+  .button {
+    color: $uiMinGreen;
+    border: 1px solid $uiMinGreen;
+    width: 376px;
+    height: 48px;
+    background-color: white;
+    border-radius: 8px;
+  }
+  .text {
+    color: #93a2ba;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .about {
+    color: $blue;
+    cursor: pointer;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    color: $txtSecondary_1;
+  }
+}

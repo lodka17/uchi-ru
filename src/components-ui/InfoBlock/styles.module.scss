@@ -1,0 +1,35 @@
+@import "../../styles/globalStyles.scss";
+
+.infoBlock {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  .imgWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $uiOrange_20;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .title {
+    font-size: 16px;
+    color: $black;
+  }
+
+  .value {
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: $gray;
+  }
+}

@@ -1,0 +1,91 @@
+@import "../../styles/globalStyles.scss";
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 32px 43px 32px;
+  box-shadow: 0px 0px 1px #d2d8e2, 0px 2px 16px rgba(147, 162, 186, 0.3);
+  height: 301px;
+  border-radius: 12px;
+  font-family: Montserrat;
+  background-color: white;
+  width: 100%;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .info {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .img {
+    width: 48px;
+    height: 48px;
+    margin-right: 24px;
+    margin-top: 4px;
+  }
+  .name {
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 36px;
+  }
+  .age {
+    font-size: 24px;
+    color: $txtPrimary;
+    font-weight: 600;
+
+    margin-left: 64px;
+  }
+
+  .status {
+    margin-left: 29px;
+    color: $txtSecondary_1;
+    border: 1px solid #d2d8e2;
+    border-radius: 12px;
+    height: 24px;
+    width: 76px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 6px;
+  }
+
+  .cash {
+    font-size: 24px;
+  }
+
+  .cashTitle {
+    font-family: Montserrat-Bold;
+    font-weight: 700;
+  }
+
+  .cashValue {
+    display: flex;
+    gap: 21px;
+    justify-content: flex-end;
+    align-items: center;
+    height: 45px;
+    color: $uiMaxYellow;
+  }
+
+  .edit {
+    font-size: 16px;
+    cursor: pointer;
+
+    button {
+      cursor: pointer;
+      height: 24px;
+      border: none;
+      outline: none;
+      background: none;
+      color: $uiSky_100;
+    }
+  }
+
+  .editImg {
+    height: 20px;
+  }
+}

@@ -1,0 +1,43 @@
+@import "../../styles/globalStyles.scss";
+
+.award {
+  position: relative;
+
+  &:hover {
+    .name,
+    .tail {
+      transition-delay: 0.3s;
+      opacity: 1;
+    }
+  }
+  .img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .tail {
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    left: 30px;
+    bottom: -13px;
+    transform: rotate(45deg);
+    background-color: $neutral;
+    transition: 0s opacity;
+    opacity: 0;
+  }
+  .tooltip {
+    position: relative;
+  }
+  .name {
+    position: absolute;
+    bottom: -40px;
+    white-space: nowrap;
+    transition: 0s opacity;
+    opacity: 0;
+    background-color: $neutral;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+}
