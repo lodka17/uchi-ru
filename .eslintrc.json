@@ -132,13 +132,6 @@
     ],
     "space-in-parens": "error",
     "space-infix-ops": "error",
-    "space-unary-ops": [
-      2,
-      {
-        "words": false,
-        "nonwords": true
-      }
-    ],
     "spaced-comment": [
       "error",
       "always"
