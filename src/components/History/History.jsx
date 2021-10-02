@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import DateRangePicker from "@wojtekmaj/react-daterange-picker";
 import React, { useState } from "react";
 import key from "weak-key";
@@ -25,6 +24,9 @@ const historyTitles = [
   {
     name: "Статус",
   },
+  {
+    name: "Лайки",
+  },
 ];
 
 const tabel = [
@@ -36,6 +38,7 @@ const tabel = [
     question: "Как называлась программа М.С Горбачёва, проводима во внешней политике",
     answer: "Холодная война",
     status: "Пятёрочка",
+    likes: "50",
   },
   {
     link: "",
@@ -45,6 +48,7 @@ const tabel = [
     question: "Как называлась программа М.С Горбачёва, проводима во внешней политике",
     answer: "Холодная война",
     status: "Пятёрочка",
+    likes: "40",
   },
   {
     link: "",
@@ -54,6 +58,7 @@ const tabel = [
     question: "Как называлась программа М.С Горбачёва, проводима во внешней политике",
     answer: "Холодная война",
     status: "Пятёрочка",
+    likes: "10",
   },
   {
     link: "",
@@ -63,6 +68,7 @@ const tabel = [
     question: "Как называлась программа М.С Горбачёва, проводима во внешней политике",
     answer: "Холодная война",
     status: "Пятёрочка",
+    likes: "5",
   },
   {
     link: "",
@@ -72,6 +78,7 @@ const tabel = [
     question: "Как называлась программа М.С Горбачёва, проводима во внешней политике",
     answer: "Холодная война",
     status: "Пятёрочка",
+    likes: "3",
   },
   {
     link: "",
@@ -81,6 +88,7 @@ const tabel = [
     question: "Как называлась программа М.С Горбачёва, проводима во внешней политике",
     answer: "Холодная война",
     status: "Пятёрочка",
+    likes: "10",
   },
   {
     link: "",
@@ -90,6 +98,27 @@ const tabel = [
     question: "Как называлась программа М.С Горбачёва, проводима во внешней политике",
     answer: "Холодная война",
     status: "Пятёрочка",
+    likes: "25",
+  },
+  {
+    link: "",
+    date: "20.05.2020",
+    dateTime: "14:47",
+    subject: "Всеобщая история",
+    question: "Как называлась программа М.С Горбачёва, проводима во внешней политике",
+    answer: "Холодная война",
+    status: "Пятёрочка",
+    likes: "7",
+  },
+  {
+    link: "",
+    date: "20.05.2020",
+    dateTime: "14:47",
+    subject: "Всеобщая история",
+    question: "Как называлась программа М.С Горбачёва, проводима во внешней политике",
+    answer: "Холодная война",
+    status: "Пятёрочка",
+    likes: "1",
   },
 ];
 
@@ -102,13 +131,13 @@ export const History = () => {
     <main className={styles.history}>
       <div className={styles.container}>
         <div className={styles.flex}>
-          <h1>{title}</h1>
+          <p className={styles.title}>{title}</p>
           <a href="#" className={styles.noticeLink}>
             {notice} <span>{noticeNumber}</span>
           </a>
         </div>
         <div className={styles.flex}>
-          <h2>{subtitle}</h2>
+          <p className={styles.subtitle}>{subtitle}</p>
           <div className={styles.datepicker}>
             <DateRangePicker onChange={onChange} value={value} />
           </div>
@@ -133,6 +162,7 @@ export const History = () => {
               </div>
               <div>{el.answer}</div>
               <div className={styles.status}>{el.status}</div>
+              <div className={styles.likes}>{el.likes}</div>
             </a>
           ))}
         </div>
