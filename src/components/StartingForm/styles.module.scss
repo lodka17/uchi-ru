@@ -12,10 +12,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 614px;
-  height: 336px;
+  min-width: 614px;
+  height: min-content;
   background-color: white;
-  padding: 36px;
+  padding: 48px;
 }
 .ButtonGroup {
   display: flex;
@@ -23,7 +23,7 @@
   width: 452px;
 }
 .welcome {
-  font-family: Montserrat-Regular;
+  font-family: Montserrat-Semibold;
   font-size: 34px;
   line-height: 32px;
   text-align: center;
@@ -34,7 +34,6 @@
 .text {
   color: $txtSecondary_1;
   font-size: 24px;
-  margin-top: 28px;
   margin-bottom: 46px;
 }
 .buttons {
@@ -49,4 +48,41 @@
   }
 }
 .logo {
+}
+.otp {
+  text-align: center;
+  font-family: Montserrat-Regular;
+  font-size: 34px;
+  width: 60px;
+  height: 88px;
+  background: #FFFFFF;
+  border: 2px solid #00BD93;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 0 16px;
+}
+.resentCode {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-family: Montserrat-Regular;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.005em;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  color: #93A2BA;
+}
+.help {
+  font-family: Montserrat-Regular;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 12px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.005em;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  color: #006DF0;
+}
+.otpContainer {
+  margin-bottom: 20px;
 }
