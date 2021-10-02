@@ -20,7 +20,7 @@ export const StartingForm = () => {
     }
   });
   return (
-    <>
+    <div className={styles.wrapper}>
       {!isCodeSent && (
         <div className={styles.container}>
           <img alt={"logo"} src={logo} className={styles.logo} />
@@ -50,6 +50,6 @@ export const StartingForm = () => {
           </p>
         </div>
       )}
-    </>
+    </div>
   );
 };

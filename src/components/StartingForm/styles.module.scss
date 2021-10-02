@@ -1,9 +1,11 @@
 @import "../../styles/globalStyles.scss";
 .wrapper {
   display: flex;
-  // width: 100%;
-  // height: 1000px;
-  // background-color: #a2a0a1;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/images/background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .container {
   box-shadow: 0 0 1px #d2d8e2, 0 4px 32px rgba(147, 162, 186, 0.3);
@@ -16,6 +18,7 @@
   height: min-content;
   background-color: white;
   padding: 48px;
+
 }
 .ButtonGroup {
   display: flex;
