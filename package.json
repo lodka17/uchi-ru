@@ -16,6 +16,8 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-sonarjs": "^0.10.0",
     "html-react-parser": "^1.4.0",
+    "mobx": "^6.3.3",
+    "mobx-react-lite": "^3.2.1",
     "moment": "^2.29.1",
     "prettier": "^2.4.1",
     "ramda": "^0.27.1",

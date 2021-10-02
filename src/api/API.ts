@@ -17,7 +17,7 @@ const method = (target: Object, method: string, descriptor: MethodDescriptor): v
 
 export class API {
 
-    public readonly _baseUrl: string = process.env.REACT_APP_API_BASE_URL ?? 'http://13.59.242.244:8080'
+    public readonly _baseUrl: string = process.env.REACT_APP_API_BASE_URL ?? 'http://130.193.56.51:8080'
     get baseUrl() {
         return this._baseUrl
     }
