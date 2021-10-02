@@ -1,0 +1,95 @@
+.wrapper {
+  padding: 64px;
+  height: 100%;
+  width: 100%;
+  background: white;
+}
+.header {
+  font-family: Montserrat-Regular;
+  font-size: 34px;
+  line-height: 32px;
+  color: #111111;
+  font-weight: 600;
+}
+.tabs {
+  color: black;
+}
+.archive {
+
+}
+.titles {
+  font-family: Montserrat-Semibold;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #111111;
+}
+.slider {
+  width: 700px;
+  margin-bottom: 56px;
+}
+.timeModule {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  >span {
+    margin-left: 24px;
+  }
+  margin-bottom: 64px;
+}
+.timeContainer {
+  width: 437px;
+  height: 80px;
+  background: #F5F7FA;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+.hint {
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  line-height: 20px;
+  color: #768CA9;
+}
+.themeModule {
+  display: flex;
+  flex-direction: row;
+  :first-child {
+    margin-right: 50px;
+  }
+}
+.theme {
+  display: flex;
+  flex-direction: column;
+}
+.consultants {
+  display: flex;
+  flex-direction: row;
+}
+.users {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  line-height: 20px;
+  color: #5A7494;
+  :first-child {
+    margin-bottom: 12px;
+  }
+}
+.answersCountModule {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.answersCount {
+  margin-left: 20px;
+  font-family: Montserrat-Bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #7661D7;
+}

@@ -1,46 +1,105 @@
+import { Input } from "antd";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useState } from "react";
 import key from "weak-key";
 import { Button } from "../../components-ui/Button/";
-import { Input } from "../../components-ui/Input/";
+// import { Input } from "../../components-ui/Input/";
 import { MarginGroup } from "../../components-ui/MarginGroup/";
 import { Title } from "../../components-ui/Title/";
 import styles from "./styles.module.scss";
 
 const registrationFields = [
-  { placeholder: "Фамилия", name: "lastname" },
-  { placeholder: "Имя", name: "firstname" },
-  { placeholder: "Отчество", name: "midlename" },
-  { placeholder: "Номер телефона", name: "phone" },
-  { placeholder: "Пароль", name: "email" },
+  { placeholder: "Фамилия", name: "last_name" },
+  { placeholder: "Имя", name: "first_name" },
+  { placeholder: "Отчество", name: "middle_name" },
+  { placeholder: "Номер телефона", name: "username" },
 ];
 
-export const Registration = ({ onChange, state, onSubmit, onRemember }) => (
-  <div className={styles.registration}>
-    <MarginGroup isColumn className={styles.form}>
-      <Title className={styles.title}>Регистрация</Title>
-      <MarginGroup isColumn gap={24}>
-        {registrationFields.map((el) => (
-          <Input
-            hat={state[el.name] && el.placeholder}
-            key={key(el)}
-            type="text"
-            onChange={onChange}
-            name={el.name}
-            placeholder={el.placeholder}
-            value={state[el.name]}
-          />
-        ))}
+export const Registration = ({
+  onChange,
+  state,
+  onRemember,
+  onSubmit,
+  isAuthorized,
+  setIsAuthorized,
+}) => {
+  // eslint-disable-next-line no-unused-vars
+
+  return (
+    <div className={styles.registration}>
+      <MarginGroup isColumn className={styles.form}>
+        {!isAuthorized && (
+          <>
+            <Title className={styles.title}>Регистрация</Title>
+            <MarginGroup isColumn gap={24}>
+              {registrationFields.map((el) => (
+                <Input
+                  className={styles.input}
+                  hat={state[el.name] && el.placeholder}
+                  key={key(el)}
+                  type="text"
+                  onChange={onChange}
+                  name={el.name}
+                  placeholder={el.placeholder}
+                  value={state[el.name]}
+                  allowClear
+                  size="large"
+                />
+              ))}
+              <Input.Password
+                className={styles.input}
+                onChange={onChange}
+                name="password"
+                placeholder="Пароль"
+                value={state["password"]}
+                allowClear
+                size="large"
+              />
+            </MarginGroup>
+            <Button onClick={onSubmit} className={styles.button}>
+              Присоединиться
+            </Button>
+            <p className={styles.remember} onClick={setIsAuthorized}>
+              Уже зарегестрирован?
+            </p>
+          </>
+        )}
+        {isAuthorized && (
+          <>
+            <Title className={styles.title}>Авторизация</Title>
+            <MarginGroup isColumn gap={24}>
+              <Input
+                className={styles.input}
+                type="text"
+                onChange={onChange}
+                name="username"
+                placeholder={"Номер телефона"}
+                value={state.username}
+                allowClear
+                size="large"
+              />
+              <Input.Password
+                className={styles.input}
+                onChange={onChange}
+                name="password"
+                placeholder="Пароль"
+                value={state.password}
+                allowClear
+                size="large"
+              />
+              <Button onClick={onSubmit} className={styles.button}>
+                Войти
+              </Button>
+              <p className={styles.remember} onClick={onRemember}>
+                Забыли логин или пароль ?
+              </p>
+            </MarginGroup>
+          </>
+        )}
       </MarginGroup>
-      <Button onClick={onSubmit} className={styles.button}>
-        Присоединиться
-      </Button>
-      <p className={styles.remember} onClick={onRemember}>
-        Забыли логин или пароль ?
-      </p>
-    </MarginGroup>
-  </div>
-);
+    </div>
+  );
+};
 
 Registration.propTypes = {
   onChange: PropTypes.func,

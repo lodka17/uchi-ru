@@ -1,0 +1,119 @@
+@import "../../styles/globalStyles.scss";
+.wrapper {
+  padding: 65px 65px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/images/bottom.svg");
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+.header {
+  font-family: Montserrat-Regular;
+  font-size: 34px;
+  line-height: 32px;
+  color: #111111;
+  font-weight: 600;
+  margin-bottom: 76px;
+}
+.commandsContainer {
+  display: flex;
+  flex-direction: row;
+}
+.facultiesImg {
+  margin-left: 56px;
+}
+.title {
+  font-family: Montserrat-Regular;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  font-feature-settings: 'tnum' on, 'lnum' on, 'cv03' on, 'cv04' on;
+  color: #5A7494;
+  margin-bottom: 45px;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.flex {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  :first-child {
+    width: 28%;
+  }
+  :last-child {
+    width: 72%;
+  }
+}
+.row {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  > img {
+    margin-right: 18px;
+  }
+  margin-bottom: 70px;
+  :first-child {
+    width: 5%;
+  }
+  :nth-child(2) {
+    width: 12%;
+  }
+  :nth-child(3) {
+    width: 10%;
+  }
+  :last-child {
+    width: 100%;
+  }
+}
+
+.text {
+  margin-bottom: 0;
+  font-family: Montserrat-Regular;
+  font-weight: 600;
+  width: 411px !important;
+  font-size: 20px;
+  line-height: 26px;
+  color: #111924;
+}
+.greenText {
+  margin-bottom: 0;
+  font-family: Montserrat-Regular;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  font-feature-settings: 'tnum' on, 'lnum' on, 'cv03' on, 'cv04' on;
+  color: #00BD93;
+}
+.firstColumn {
+
+}
+.secondColumn {
+  margin-right: 111px;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 157px;
+}
+.secondRow {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: 80px;
+}
+.user {
+  margin-left: 12px;
+  font-family: Montserrat-Regular;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  font-feature-settings: 'tnum' on, 'lnum' on, 'cv03' on, 'cv04' on;
+  color: #111924;
+}

@@ -1,0 +1,48 @@
+@import "../../styles/globalStyles.scss";
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/images/background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: min-content;
+  padding: 48px;
+}
+.button {
+  font-family: Montserrat-Regular;
+  background: $uiMinGreen;
+  border-radius: 8px;
+  width: 380px;
+  height: 48px;
+  color: $white;
+
+  &:active {
+    background-color: lighten($uiMinGreen, 5%);
+  }
+}
+.oops {
+  font-family: Montserrat-Regular;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #111924;
+}
+.text {
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #5A7494;
+  margin-bottom: 56px;
+}
+.errorPage {
+  margin-bottom: 65px;
+}

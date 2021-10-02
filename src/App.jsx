@@ -1,5 +1,10 @@
-import React, { useEffect, useState } from "react";
+
+/* eslint-disable */
+import { Button } from "antd";
+import { observer } from "mobx-react-lite";
+import React, {useEffect} from "react";
 import "./App.scss";
+import "antd/dist/antd.css";
 import "./assets/fonts/fonts.css";
 // import calendar from "./calendar.svg";
 // import { InfoBlock } from "./components-ui/InfoBlock/InfoBlock";
@@ -7,27 +12,34 @@ import { Progress } from "./components-ui/Progress";
 // import { RegistrationBL } from "./components-bl/RegistrationBL/RegistrationBL";
 // import { Registration } from "./components-bl/Registration/";
 // import { StartingPage } from "./components-bl/StartingPage/StartingPage";
+import { BrowserRouter } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 // import { InfoCard } from "./components/InfoCard/InfoCard";
 import { Profile } from "./components/Profile";
 // import { History } from "./components/History/History";
-// import { StartingForm } from "./components/StartingForm/StartingForm";
-//   <History />
 
-const App = () => {
-  const [procent, setProcent] = useState(0);
+import { Routing } from "./components/Routing/Routing";
+import { userStore } from "./store/auth/AuthStore";
+
+//   <History />
+const App = observer(() => {
+
   useEffect(() => {
-    const intervalId = setInterval(() => setProcent((prev) => prev + 1), 700);
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
+      userStore.auth({
+          "username": "test88",
+          "password": "qsc_user@1"
+      })
+  }, [])
+
   return (
     <div className="App">
-      <Header showMark={true} />
-      <Profile procent={`${procent}%`} level={procent} />
+      <BrowserRouter>
+        <Header showMark={true} />
+        <Routing />
+      </BrowserRouter>
     </div>
   );
-};
+
+});
 
 export default App;
