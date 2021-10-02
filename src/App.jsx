@@ -11,8 +11,8 @@ import { StartingForm } from "./components/StartingForm/StartingForm";
 //   <History />
 const App = () => (
   <div className="App">
-    <Header />
-    <StartingForm />
+      <Header showMark={true} />
+      <StartingForm />
   </div>
 );
 
