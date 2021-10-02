@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx";
-import {Auth, Register} from "../../api/user/UserAPI.types";
+import { Auth, Register } from "../../api/user/UserAPI.types";
 import { UserAPI } from "../../api/user/UserAPI";
-import {User} from "./AuthStore.types";
+import { User } from "./AuthStore.types";
 
 const api = new UserAPI();
 
@@ -13,26 +13,23 @@ class AuthStore {
     makeAutoObservable(this);
   }
 
-  async register(userData: Register.Payload) {
+  register = async (userData: Register.Payload) => {
     try {
       await api.register(userData);
     } catch (error) {
-      console.log(error);
-      this.isAuth = false
+      this.isAuth = false;
     }
-  }
+  };
 
-  async auth(userData: Auth.Payload) {
+  auth = async (userData: Auth.Payload) => {
     try {
       const user = await api.auth(userData);
-      this.user = user
-      this.isAuth = true
+      this.user = user;
+      this.isAuth = true;
     } catch (error) {
-      console.log(error);
-      this.isAuth = false
+      this.isAuth = false;
     }
-  }
-
+  };
 }
 
 export const userStore = new AuthStore();
