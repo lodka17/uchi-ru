@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { RegistrationBL } from "../../components-bl/RegistrationBL/RegistrationBL";
+import { ErrorPage } from "../404/404";
 import { StartingForm } from "../StartingForm";
 
 export const Routing = () => (
@@ -39,7 +40,7 @@ export const Routing = () => (
                 <div>Подтверждение мыла</div>
             </Route>
             <Route path="*">
-                <div>400 страница не найдена</div>
+                <ErrorPage/>
             </Route>
         </Switch>
 )
