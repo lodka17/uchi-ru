@@ -1,18 +1,28 @@
+html,
+body,
+#root,
+.App {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .App {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 html {
-    line-height: 1.15;
-    /* 1 */
-    -webkit-text-size-adjust: 100%;
-    /* 2 */
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
 /* Sections
@@ -21,14 +31,14 @@ html {
    * Remove the margin in all browsers.
    */
 body {
-    margin: 0;
+  margin: 0;
 }
 
 /**
    * Render the `main` element consistently in IE.
    */
 main {
-    display: block;
+  display: block;
 }
 
 /**
@@ -36,8 +46,8 @@ main {
    * `article` contexts in Chrome, Firefox, and Safari.
    */
 h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -47,12 +57,12 @@ h1 {
    * 2. Show the overflow in Edge and IE.
    */
 hr {
-    box-sizing: content-box;
-    /* 1 */
-    height: 0;
-    /* 1 */
-    overflow: visible;
-    /* 2 */
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
 }
 
 /**
@@ -60,10 +70,10 @@ hr {
    * 2. Correct the odd `em` font sizing in all browsers.
    */
 pre {
-    font-family: monospace, monospace;
-    /* 1 */
-    font-size: 1em;
-    /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /* Text-level semantics
@@ -72,7 +82,7 @@ pre {
    * Remove the gray background on active links in IE 10.
    */
 a {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 /**
@@ -80,9 +90,9 @@ a {
    * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
    */
 abbr[title] {
-    border-bottom: none;
-    /* 1 */
-    text-decoration: none;
+  border-bottom: none;
+  /* 1 */
+  text-decoration: none;
 }
 
 /**
@@ -95,17 +105,17 @@ abbr[title] {
 code,
 kbd,
 samp {
-    font-family: monospace, monospace;
-    /* 1 */
-    font-size: 1em;
-    /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /**
    * Add the correct font size in all browsers.
    */
 small {
-    font-size: 80%;
+  font-size: 80%;
 }
 
 /**
@@ -114,18 +124,18 @@ small {
    */
 sub,
 sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
 sub {
-    bottom: -0.25em;
+  bottom: -0.25em;
 }
 
 sup {
-    top: -0.5em;
+  top: -0.5em;
 }
 
 /* Embedded content
@@ -134,7 +144,7 @@ sup {
    * Remove the border on images inside links in IE 10.
    */
 img {
-    border-style: none;
+  border-style: none;
 }
 
 /* Forms
@@ -148,14 +158,14 @@ input,
 optgroup,
 select,
 textarea {
-    font-family: inherit;
-    /* 1 */
-    font-size: 100%;
-    /* 1 */
-    line-height: 1.15;
-    /* 1 */
-    margin: 0;
-    /* 2 */
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
 }
 
 /**
@@ -164,8 +174,8 @@ textarea {
    */
 button,
 input {
-    /* 1 */
-    overflow: visible;
+  /* 1 */
+  overflow: visible;
 }
 
 /**
@@ -174,8 +184,8 @@ input {
    */
 button,
 select {
-    /* 1 */
-    text-transform: none;
+  /* 1 */
+  text-transform: none;
 }
 
 /**
@@ -185,7 +195,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-    -webkit-appearance: button;
+  -webkit-appearance: button;
 }
 
 /**
@@ -195,8 +205,8 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
+  border-style: none;
+  padding: 0;
 }
 
 /**
@@ -206,14 +216,14 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText;
+  outline: 1px dotted ButtonText;
 }
 
 /**
    * Correct the padding in Firefox.
    */
 fieldset {
-    padding: 0.35em 0.75em 0.625em;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 /**
@@ -223,32 +233,32 @@ fieldset {
    *    `fieldset` elements in all browsers.
    */
 legend {
-    box-sizing: border-box;
-    /* 1 */
-    color: inherit;
-    /* 2 */
-    display: table;
-    /* 1 */
-    max-width: 100%;
-    /* 1 */
-    padding: 0;
-    /* 3 */
-    white-space: normal;
-    /* 1 */
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
 }
 
 /**
    * Add the correct vertical alignment in Chrome, Firefox, and Opera.
    */
 progress {
-    vertical-align: baseline;
+  vertical-align: baseline;
 }
 
 /**
    * Remove the default vertical scrollbar in IE 10+.
    */
 textarea {
-    overflow: auto;
+  overflow: auto;
 }
 
 /**
@@ -257,10 +267,10 @@ textarea {
    */
 [type="checkbox"],
 [type="radio"] {
-    box-sizing: border-box;
-    /* 1 */
-    padding: 0;
-    /* 2 */
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
 }
 
 /**
@@ -268,7 +278,7 @@ textarea {
    */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-    height: auto;
+  height: auto;
 }
 
 /**
@@ -276,17 +286,17 @@ textarea {
    * 2. Correct the outline style in Safari.
    */
 [type="search"] {
-    -webkit-appearance: textfield;
-    /* 1 */
-    outline-offset: -2px;
-    /* 2 */
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
 }
 
 /**
    * Remove the inner padding in Chrome and Safari on macOS.
    */
 [type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 /**
@@ -294,10 +304,10 @@ textarea {
    * 2. Change font properties to `inherit` in Safari.
    */
 ::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    /* 1 */
-    font: inherit;
-    /* 2 */
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
 }
 
 /* Interactive
@@ -306,14 +316,14 @@ textarea {
    * Add the correct display in Edge, IE 10+, and Firefox.
    */
 details {
-    display: block;
+  display: block;
 }
 
 /*
    * Add the correct display in all browsers.
    */
 summary {
-    display: list-item;
+  display: list-item;
 }
 
 /* Misc
@@ -322,14 +332,14 @@ summary {
    * Add the correct display in IE 10+.
    */
 template {
-    display: none;
+  display: none;
 }
 
 /**
    * Add the correct display in IE 10.
    */
 [hidden] {
-    display: none;
+  display: none;
 }
 
 /*! CSS RESET START  */
@@ -337,13 +347,13 @@ template {
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Remove default padding */
 ul[class],
 ol[class] {
-    padding: 0;
+  padding: 0;
 }
 
 article,
@@ -358,48 +368,48 @@ menu,
 nav,
 section,
 summary {
-    display: block;
+  display: block;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* Remove default margin */
 /* Set core body defaults */
 body {
-    min-height: 100vh;
-    scroll-behavior: smooth;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-    overflow-x: hidden;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[class],
 ol[class] {
-    list-style: none;
+  list-style: none;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-    text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
 img {
-    max-width: 100%;
-    display: block;
-    height: auto;
+  max-width: 100%;
+  display: block;
+  height: auto;
 }
 
 /* Natural flow and rhythm in articles by default */
 article > * + * {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -407,7 +417,7 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
@@ -415,91 +425,91 @@ select {
 .react-daterange-picker__inputGroup,
 .react-daterange-picker__range-divider,
 .react-daterange-picker__clear-button {
-    display: none !important;
+  display: none !important;
 }
 
 .react-daterange-picker__wrapper {
-    border: none !important;
+  border: none !important;
 }
 
 .react-daterange-picker__calendar-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 16px !important;
-    color: #5a7494;
-    border: 1px solid #d2d8e2 !important;
-    border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px !important;
+  color: #5a7494;
+  border: 1px solid #d2d8e2 !important;
+  border-radius: 4px;
+  transition: 0.2s linear;
+
+  svg {
+    stroke: #5a7494;
     transition: 0.2s linear;
+  }
+
+  &::before {
+    content: "Фильтр";
+    display: block;
+    margin-right: 8px;
+  }
+
+  &:hover {
+    background-color: #ada0e7;
+    color: #fff;
 
     svg {
-        stroke: #5a7494;
-        transition: 0.2s linear;
+      stroke: #fff !important;
     }
-
-    &::before {
-        content: "Фильтр";
-        display: block;
-        margin-right: 8px;
-    }
-
-    &:hover {
-        background-color: #ada0e7;
-        color: #fff;
-
-        svg {
-            stroke: #fff !important;
-        }
-    }
+  }
 }
 
 .react-calendar__tile--now {
-    background-color: #fff !important;
+  background-color: #fff !important;
 
-    &:hover {
-        background-color: #e6e6e6 !important;
-    }
+  &:hover {
+    background-color: #e6e6e6 !important;
+  }
 }
 
 .react-calendar__tile--active {
-    background-color: #e8e2ff !important;
-    color: #000 !important;
+  background-color: #e8e2ff !important;
+  color: #000 !important;
 }
 
 .react-calendar__tile--rangeStart {
-    border: 2px solid #7661d7 !important;
-    box-sizing: border-box;
-    border-radius: 4px 0px 0px 4px !important;
+  border: 2px solid #7661d7 !important;
+  box-sizing: border-box;
+  border-radius: 4px 0px 0px 4px !important;
 }
 
 .react-calendar__tile--rangeEnd {
-    border: 2px solid #7661d7 !important;
-    box-sizing: border-box;
-    border-radius: 0px 4px 4px 0px !important;
+  border: 2px solid #7661d7 !important;
+  box-sizing: border-box;
+  border-radius: 0px 4px 4px 0px !important;
 }
 
 .react-calendar__month-view__days__day--weekend {
-    color: #000 !important;
+  color: #000 !important;
 }
 
 .react-calendar__tile {
-    transition: 0.1s linear !important;
+  transition: 0.1s linear !important;
 }
 
 .react-calendar {
-    border-radius: 4px;
-    border: none !important;
-    filter: drop-shadow(0px -1.5px 6px rgba(0, 0, 0, 0.06)) drop-shadow(0px 0.6px 1.8px rgba(0, 0, 0, 0.1))
-        drop-shadow(0px 3.2px 7.2px rgba(0, 0, 0, 0.14));
+  border-radius: 4px;
+  border: none !important;
+  filter: drop-shadow(0px -1.5px 6px rgba(0, 0, 0, 0.06))
+    drop-shadow(0px 0.6px 1.8px rgba(0, 0, 0, 0.1)) drop-shadow(0px 3.2px 7.2px rgba(0, 0, 0, 0.14));
 }
 
 .react-daterange-picker--open {
-    .react-daterange-picker__calendar-button {
-        background-color: #ada0e7;
-        color: #fff;
+  .react-daterange-picker__calendar-button {
+    background-color: #ada0e7;
+    color: #fff;
 
-        svg {
-            stroke: #fff !important;
-        }
+    svg {
+      stroke: #fff !important;
     }
+  }
 }
