@@ -17,7 +17,7 @@ export const Shop = () => {
       name: "Значок",
     },
     {
-      name: "Белаф футболка",
+      name: "Белая футболка",
     },
   ];
   return (
