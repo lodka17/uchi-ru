@@ -1,5 +1,5 @@
 import React from "react";
-import { StartingForm } from "../../components/StartingForm/StartingForm";
+import { StartingForm } from "../../components/StartingForm/";
 
 export const StartingPage = () => (
   <div>
