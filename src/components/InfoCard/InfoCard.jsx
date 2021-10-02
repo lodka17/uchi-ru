@@ -3,7 +3,6 @@ import React, { useReducer } from "react";
 import key from "weak-key";
 import { InfoBlock } from "../../components-ui/InfoBlock/InfoBlock";
 import { MarginGroup } from "../../components-ui/MarginGroup";
-import { InfoBlockWrapper } from "../InfoBlockWrapper/InfoBlockWrapper";
 import coinSvg from "./images/coin.svg";
 import editSvg from "./images/edit.svg";
 import styles from "./styles.module.scss";

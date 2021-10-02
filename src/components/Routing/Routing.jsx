@@ -8,6 +8,7 @@ import { Help } from "../Help/Help";
 import { Questions } from "../Questions/Questions";
 import { StartingForm } from "../StartingForm";
 import { Shop } from "../Shop/Shop";
+import { ProfileBL } from "../../components-bl/ProfileBL/ProfileBL";
 
 export const Routing = () => (
   <Switch>
@@ -35,11 +36,12 @@ export const Routing = () => (
     <Route exact path="/answers">
       <Answers />
     </Route>
-    <Route exact path="/profile">
-      <div>Профиль</div>
-    </Route>
+
     <Route exact path="/register">
       <RegistrationBL />
+    </Route>
+    <Route exact path="/profile">
+      <ProfileBL />
     </Route>
     <Route exact path="/confirm_email">
       <div>Подтверждение мыла</div>
