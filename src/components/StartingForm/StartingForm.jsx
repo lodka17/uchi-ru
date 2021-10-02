@@ -1,5 +1,6 @@
 import React from "react";
 import AuthCode from "react-auth-code-input";
+import { useHistory } from "react-router-dom";
 import logo from "../../assets/icons/Logo.svg";
 import { Button } from "../../components-ui/Button/";
 import { MarginGroup } from "../../components-ui/MarginGroup";
@@ -8,6 +9,7 @@ import styles from "./styles.module.scss";
 export const StartingForm = () => {
   const isCodeSent = true;
   const number = "+7 000  *** 00 00";
+  const history = useHistory();
   const [seconds, setSeconds] = React.useState(60);
   const [loading, setLoading] = React.useState(true);
 
@@ -21,18 +23,22 @@ export const StartingForm = () => {
   });
   return (
     <div className={styles.wrapper}>
-      {!isCodeSent && (
+      {isCodeSent && (
         <div className={styles.container}>
           <img alt={"logo"} src={logo} className={styles.logo} />
           <p className={styles.welcome}>Добро пожаловать!</p>
           <p className={styles.text}>Войти как</p>
           <MarginGroup gap={48}>
-            <Button className={styles.buttons}>Ученик</Button>
-            <Button className={styles.buttons}>Учитель</Button>
+            <Button onClick={() => history.push("/register")} className={styles.buttons}>
+              Ученик
+            </Button>
+            <Button onClick={() => history.push("/register")} className={styles.buttons}>
+              Учитель
+            </Button>
           </MarginGroup>
         </div>
       )}
-      {isCodeSent && (
+      {!isCodeSent && (
         <div className={styles.container}>
           <img alt={"logo"} src={logo} className={styles.logo} />
           <p className={styles.welcome}>Введите код</p>

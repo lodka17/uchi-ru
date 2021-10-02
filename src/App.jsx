@@ -11,11 +11,12 @@ import { Header } from "./components/Header/Header";
 import { Routing } from "./components/Routing/Routing";
 
 //   <History />
+
 const App = () => (
   <div className="App">
     <BrowserRouter>
-        <Header showMark={true} />
-        <Routing/>
+      <Header showMark={true} />
+      <Routing />
     </BrowserRouter>
   </div>
 );
