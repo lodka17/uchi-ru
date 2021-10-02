@@ -6,7 +6,7 @@ import { Button } from "../../components-ui/Button";
 import buttonStyle from "../StartingForm/styles.module.scss";
 import styles from "./styles.module.scss";
 
-export const Questions = () => {
+export const Help = () => {
   const { TabPane } = Tabs;
   const { Option } = Select;
   const { RangePicker } = DatePicker;

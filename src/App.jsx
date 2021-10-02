@@ -8,12 +8,12 @@ import "antd/dist/antd.css";
 import { Header } from "./components/Header/Header";
 // import { History } from "./components/History/History";
 // import { StartingForm } from "./components/StartingForm/StartingForm";
-import { Questions } from "./components/Questions/Questions";
+import { Help } from "./components/Help/Help";
 //   <History />
 const App = () => (
   <div className="App">
     <Header showMark={true} />
-    <Questions />
+    <Help />
   </div>
 );
 
