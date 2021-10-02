@@ -1,42 +1,64 @@
+@import "../../styles/globalStyles.scss";
+
 .header {
-    font-family: "Montserrat-Regular";
-    height: 48px;
-    background: #f2f5f9;
+  font-family: "Montserrat-Regular";
+  height: 48px;
+  min-height: 48px;
+  background: $white;
+  box-shadow: inset 0px -1px 0px #e9eff5;
+  padding: 0 36px;
+  position: sticky;
+  top: 0px;
 
-    .container {
-        max-width: 1440px;
-        margin: 0 auto;
-        width: calc(100% - 60px);
-        height: 100%;
-    }
+  .container {
+    margin: 0 auto;
+    height: 100%;
+  }
 
-    .flex {
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    li {
+      display: inline-block;
+
+      a {
+        color: #111924;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+
+      &.left {
+        margin-right: 24px;
+      }
+
+      &.right {
+        margin-left: 24px;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
+        gap: 8px;
+      }
     }
+  }
 
-    .list {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        li {
-            display: inline-block;
+  .icon {
+    position: relative;
+  }
 
-            a{
-                color: #111924;
-                text-transform: uppercase;
-                font-size: 12px;
-            }
-
-            &.left{
-                margin-right: 24px;
-            }
-
-            &.right{
-                margin-left: 24px;
-            }
-        }
-    }
+  .mark {
+    right: 1px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: $uiMaxYellow;
+    border: 1px solid rgba(#e5e8ec, 1);
+    box-sizing: border-box;
+    position: absolute;
+  }
 }
