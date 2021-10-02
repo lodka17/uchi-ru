@@ -1,3 +1,5 @@
+@import "../../styles/globalStyles.scss";
+
 .wrapper {
   display: flex;
   width: 100%;
@@ -5,7 +7,7 @@
   background-color: #a2a0a1;
 }
 .container {
-  box-shadow: 0 0 1px #D2D8E2, 0 4px 32px rgba(147, 162, 186, 0.3);
+  box-shadow: 0 0 1px #d2d8e2, 0 4px 32px rgba(147, 162, 186, 0.3);
   border-radius: 12px;
   margin: auto;
   display: flex;
@@ -22,7 +24,6 @@
   width: 452px;
 }
 .text {
-
   font-family: Montserrat-Regular;
   font-size: 34px;
   line-height: 32px;
@@ -30,10 +31,15 @@
   color: #111924;
 }
 .buttons {
-  background: #00BD93;
+  background: $uiMinGreen;
   border-radius: 8px;
   width: 202px;
   height: 48px;
+  color: $white;
+
+  &:active {
+    background-color: lighten($uiMinGreen, 5%);
+  }
 }
 .logo {
 }
