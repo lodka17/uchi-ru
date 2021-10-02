@@ -31,7 +31,10 @@
 }
 .buttons {
   background: $uiMinGreen;
+  border-radius: 8px;
   width: 202px;
+  height: 48px;
+  color: $white;
 
   &:active {
     background-color: lighten($uiMinGreen, 5%);

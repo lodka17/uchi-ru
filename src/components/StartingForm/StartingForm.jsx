@@ -9,7 +9,7 @@ export const StartingForm = () => (
       <img alt={"logo"} src={logo} className={styles.logo} />
       <p className={styles.text}>Добро пожаловать!</p>
       <div className={styles.ButtonGroup}>
-        <Button className={styles.buttons}>Учение</Button>
+        <Button className={styles.buttons}>Ученик</Button>
         <Button className={styles.buttons}>Учитель</Button>
       </div>
     </div>

@@ -16,11 +16,6 @@ export default React.memo(Button);
 
 Button.propTypes = {
   className: PropTypes.string,
-  disabled: PropTypes.bool,
   children: PropTypes.node.isRequired,
-};
-
-Button.defaultProps = {
-  className: "",
-  disabled: false,
+  disabled: PropTypes.bool,
 };

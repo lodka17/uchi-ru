@@ -1,0 +1,42 @@
+.header {
+    font-family: "Montserrat-Regular";
+    height: 48px;
+    background: #f2f5f9;
+
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        width: calc(100% - 60px);
+        height: 100%;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .list {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        li {
+            display: inline-block;
+
+            a{
+                color: #111924;
+                text-transform: uppercase;
+                font-size: 12px;
+            }
+
+            &.left{
+                margin-right: 24px;
+            }
+
+            &.right{
+                margin-left: 24px;
+            }
+        }
+    }
+}
