@@ -4,7 +4,7 @@ import React from "react";
 
 import "./MarginGroup.scss";
 
-export const MarginGroup = React.memo(({ gap, className, children, isColumn, style }) => {
+export const MarginGroup = React.memo(({ gap, className, children, isColumn, style, ...rest }) => {
   const classes = clsx("margin-group", className);
   const styleComponent = {
     gap,
@@ -13,7 +13,7 @@ export const MarginGroup = React.memo(({ gap, className, children, isColumn, sty
   };
 
   return (
-    <div style={styleComponent} className={classes}>
+    <div style={styleComponent} className={classes} {...rest}>
       {children}
     </div>
   );

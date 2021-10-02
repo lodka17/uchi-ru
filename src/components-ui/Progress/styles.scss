@@ -19,9 +19,10 @@
 }
 
 .progress-bar {
+  position: relative;
+  width: 100%;
   // background-color: #1a1a1a;
   height: 48px;
-  margin: 50px auto;
   border-radius: 13px;
   // box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
 }
@@ -79,6 +80,16 @@
   background-color: #cce2fc;
   border-radius: 3px;
   // box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-  position: relative;
+
   // animation: auto-progress 10s infinite linear;
+}
+
+.progress-bar-level {
+  color: #111;
+  padding: 8px 48px;
+  font-family: Montserrat-Bold;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  height: 48px;
 }

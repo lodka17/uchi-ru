@@ -9,6 +9,9 @@
   height: 301px;
   border-radius: 12px;
   font-family: Montserrat;
+  background-color: white;
+  width: 100%;
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -69,8 +72,17 @@
   }
 
   .edit {
-    color: $uiSky_100;
     font-size: 16px;
+    cursor: pointer;
+
+    button {
+      cursor: pointer;
+      height: 24px;
+      border: none;
+      outline: none;
+      background: none;
+      color: $uiSky_100;
+    }
   }
 
   .editImg {
