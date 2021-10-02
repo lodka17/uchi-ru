@@ -1,8 +1,9 @@
+import { Input } from "antd";
 import PropTypes from "prop-types";
 import React from "react";
 import key from "weak-key";
 import { Button } from "../../components-ui/Button/";
-import { Input } from "../../components-ui/Input/";
+// import { Input } from "../../components-ui/Input/";
 import { MarginGroup } from "../../components-ui/MarginGroup/";
 import { Title } from "../../components-ui/Title/";
 import styles from "./styles.module.scss";
@@ -12,7 +13,6 @@ const registrationFields = [
   { placeholder: "Имя", name: "firstname" },
   { placeholder: "Отчество", name: "midlename" },
   { placeholder: "Номер телефона", name: "phone" },
-  { placeholder: "Пароль", name: "email" },
 ];
 
 export const Registration = ({ onChange, state, onSubmit, onRemember }) => (
@@ -22,6 +22,7 @@ export const Registration = ({ onChange, state, onSubmit, onRemember }) => (
       <MarginGroup isColumn gap={24}>
         {registrationFields.map((el) => (
           <Input
+            className={styles.input}
             hat={state[el.name] && el.placeholder}
             key={key(el)}
             type="text"
@@ -29,8 +30,19 @@ export const Registration = ({ onChange, state, onSubmit, onRemember }) => (
             name={el.name}
             placeholder={el.placeholder}
             value={state[el.name]}
+            allowClear
+            size="large"
           />
         ))}
+        <Input.Password
+          className={styles.input}
+          onChange={onChange}
+          name="password"
+          placeholder="Пароль"
+          value={state["password"]}
+          allowClear
+          size="large"
+        />
       </MarginGroup>
       <Button onClick={onSubmit} className={styles.button}>
         Присоединиться

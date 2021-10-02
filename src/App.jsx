@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.scss";
+import "antd/dist/antd.css";
 import "./assets/fonts/fonts.css";
 // import { RegistrationBL } from "./components-bl/RegistrationBL/RegistrationBL";
 // import { Registration } from "./components-bl/Registration/";
