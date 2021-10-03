@@ -1,5 +1,6 @@
 import axios, {AxiosInstance} from 'axios'
 import {Endpoint, MethodDescriptor} from "./API.types";
+import {userStore} from "../store/auth/AuthStore";
 
 const method = (target: Object, method: string, descriptor: MethodDescriptor): void => {
     const originalMethod = descriptor.value
@@ -32,36 +33,47 @@ export class API {
 
     constructor() {
         this.httpClient = axios.create({
-            baseURL: this.baseUrl,
-            headers: {}
+            baseURL: this.baseUrl
         })
     }
 
     @method
     protected async read<R>(url: string, queryParams?: object): Promise<R> {
         return await this.httpClient.get<never, R>(url, {
-            params: queryParams ?? {}
+            params: queryParams ?? {},
+            headers: {
+                'Authorization': userStore.token
+            }
         })
     }
 
     @method
     protected async create<P, R>(url: string, payload?: P, queryParams?: object): Promise<R> {
         return await this.httpClient.post<P, R>(url, payload, {
-            params: queryParams ?? {}
+            params: queryParams ?? {},
+            headers: {
+                'Authorization': userStore.token
+            }
         })
     }
 
     @method
     protected async update<P, R>(url: string, payload?: P, queryParams?: object): Promise<R> {
         return await this.httpClient.put<P, R>(url, payload, {
-            params: queryParams ?? {}
+            params: queryParams ?? {},
+            headers: {
+                'Authorization': userStore.token
+            }
         })
     }
 
     @method
     protected async delete<R>(url: string, queryParams?: object): Promise<R> {
         return await this.httpClient.delete<never, R>(url, {
-            params: queryParams ?? {}
+            params: queryParams ?? {},
+            headers: {
+                'Authorization': userStore.token
+            }
         })
     }
 

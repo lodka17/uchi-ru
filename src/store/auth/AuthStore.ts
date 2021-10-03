@@ -8,6 +8,7 @@ const api = new UserAPI();
 class AuthStore {
   isAuth: boolean = false;
   user: User = null;
+  token: string = ''
 
   constructor() {
     makeAutoObservable(this);
@@ -27,6 +28,7 @@ class AuthStore {
       const user = await api.auth(userData);
       this.user = user
       this.isAuth = true
+      this.token = user.token
     } catch (error) {
       console.log(error);
       this.isAuth = false
