@@ -23,8 +23,6 @@ export const Registration = ({
   isAuthorized,
   setIsAuthorized,
 }) => {
-  // eslint-disable-next-line no-unused-vars
-
   return (
     <div className={styles.registration}>
       <MarginGroup isColumn className={styles.form}>

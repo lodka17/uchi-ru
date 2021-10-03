@@ -12,15 +12,50 @@ export const Help = () => {
   const { RangePicker } = DatePicker;
   const answersCount = 86;
   const marks = {
-    0: "1",
-    1: "2",
-    2: "3",
-    3: "4",
-    4: "5",
+    0: {
+      style: {
+        color: "#5A7494",
+      },
+      label: <strong>0</strong>,
+    },
+    1: {
+      style: {
+        color: "#5A7494",
+      },
+      label: <strong>1</strong>,
+    },
+    2: {
+      style: {
+        color: "#5A7494",
+      },
+      label: <strong>2</strong>,
+    },
+    3: {
+      style: {
+        color: "#5A7494",
+      },
+      label: <strong>3</strong>,
+    },
+    4: {
+      style: {
+        color: "#5A7494",
+      },
+      label: <strong>4</strong>,
+    },
   };
   const answersMarks = {
-    0: "1",
-    100: "100",
+    0: {
+      style: {
+        color: "#7661D7",
+      },
+      label: <strong>0</strong>,
+    },
+    100: {
+      style: {
+        color: "#7661D7",
+      },
+      label: <strong>100</strong>,
+    },
   };
   const format = "HH:mm";
 

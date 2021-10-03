@@ -1,6 +1,6 @@
 @import "../../styles/globalStyles.scss";
 .wrapper {
-  padding: 65px 65px;
+  padding: 65px 195px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -72,6 +72,7 @@
   line-height: 16px;
   text-transform: uppercase;
   color: #111924;
+  margin-bottom: 20px;
 }
 .money {
   font-family: Montserrat-Regular;
@@ -87,4 +88,37 @@
 .shop {
   display: flex;
   flex-wrap: wrap;
+}
+.cashValue {
+  font-family: Montserrat-Regular;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #E37602;
+  align-items: center;
+}
+.cashTitle {
+  font-family: Montserrat-Regular;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #111111;
+}
+.cash {
+  margin-right: 90px;
+}
+.marginGroup {
+  align-items: center;
+}
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pin {
+  margin-bottom: 50px;
+  margin-top: 26px;
+}
+.hudi {
+  width: 88%;
+  height: 88%;
 }
