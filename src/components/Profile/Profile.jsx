@@ -39,7 +39,7 @@ const awards = [
 
 const blocks = [
   { img: calendar, name: "brth", value: "11.12.2021", title: "Дата рождения" },
-  { img: ring, name: "username", value: "8 900 000 000 00", title: "Номер телефона" },
+  { img: ring, name: "username", value: "8 999 965 4935", title: "Номер телефона" },
   { img: star, name: "email", value: "KonstantinK@mail.ru", title: "Email" },
   { img: instruments, name: "inst", value: "KonstantinK009", title: "Instagram" },
 ];
@@ -49,9 +49,9 @@ export const Profile = ({ procent, level }) => (
     <InfoCard
       img={avatar2}
       age={"15"}
-      lastname="Константинович"
-      firstname="Константин"
-      middlename="Константинопольский"
+      lastname="Иванов"
+      firstname="Иван"
+      middlename="Иванович"
       status="Ученик"
       coin="10"
       blocks={blocks}

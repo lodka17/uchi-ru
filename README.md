@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+#Реализованная функциональность
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1) Полностью реализованная бэкэнд часть с умным анализатором текста и тем вопросов
+   (происходит анализ текста и на основе анализа система предлагает существующуие темы из уже имеющихся)
+2) Реализованая бэкэнд часть сайта с поддержкой видео и аудиозвонков
 
-## Available Scripts
+#Особенность проекта в следующем:
 
-In the project directory, you can run:
+1) Реализована реферальная программа с системой поощрения пригласившего
+2) Реализованы факультеты для мотивация и соревновательного момента
+3) Реализована бальная система оценивая учеников с возможностью приобритения брендированного мерча. Брендированный мерч способствует рекламе и популяризации портала
+4) Умный анализ текста
+5) Видеочат
 
-### `npm start`
+#Основной стек технологий:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Стек технологий: общее (typescript, javascript, react-router-dom), DAL (axios, es6 classes), BLL (mobx), UI (для стилей scss, для компонент React)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Python (Django + Django REST), PostgresDB, AI - sentence_transformers + BERT
 
-### `npm test`
+#Демо
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Скринкаст доступен по адресу: https://disk.yandex.ru/i/j_IspYhnok6DrA
 
-### `npm run build`
+Приложение доступно по адресу: uchi-ru-ik8c842gk-uchi-ru.vercel.app
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Админка доступна по адресу: http://130.193.56.51:8080/admin/
+Логин и пароль: 
+admin
+H6r3Lh\D#-~PcMQ6
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Апи бэка можно посмотреть в Postman (в корне репозитория)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Дизайн доступен по адресу: https://www.figma.com/file/w9M1J7ZArlqg2RDeOQ837k/Untitled?node-id=40%3A3810
 
-### `npm run eject`
+Ссылка на репозиторий фронта: https://github.com/lodka17/uchi-ru
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Ссылка на репозиторий бэка: https://github.com/Quickaxe-Martina/hack.git
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#УСТАНОВКА, НАСТРОЙКА, БАЗА ДАННЫХ, МИГРАЦИИ, ЗАВИСИМОСТИ
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Используйте OS Ubuntu
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+sudo apt install docker
 
-## Learn More
+sudo apt install docker-compose
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Если вы используете Ubuntu или macOS
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+cd compiled_project/
 
-### Code Splitting
+sudo docker-compose up --build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+#РАЗРАБОТЧИКИ
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Смирнова Анастасия designer https://t.me/ilarri_a
 
-### Making a Progressive Web App
+Нгуен Ань front https://t.me/DoctorSterben
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Бугорков Владислав front https://t.me/Sambet2
 
-### Advanced Configuration
+Затуловская Анастасия designer https://t.me/ZAnastasiyaZ
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Богданов Станислав back https://t.me/SigBogdanov
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
