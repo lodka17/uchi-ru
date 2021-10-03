@@ -19,6 +19,7 @@ export const Answers = () => {
       <Select
         showSearch
         style={{ width: 695, marginBottom: 42, marginTop: 12 }}
+        defaultValue={"Кем было создано Древнерусское государство?"}
         placeholder="Search to Select"
         optionFilterProp="children"
         filterOption={(input, option) =>
@@ -36,6 +37,7 @@ export const Answers = () => {
         style={{ width: 695, marginBottom: 42, marginTop: 12 }}
         placeholder="Search to Select"
         optionFilterProp="children"
+        defaultValue="История"
         filterOption={(input, option) =>
           option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
         }
@@ -47,7 +49,7 @@ export const Answers = () => {
       </Select>
       <div className={styles.answersCountContainer}>
         <p className={titlesStyle.titles}> Ответы на вопросы </p>
-        <p className={styles.answersCount}>{answers} ответов</p>
+        <p className={styles.answersCount}>3 ответа</p>
       </div>
       <div className={styles.container}>
         <div className={styles.answersContainer}>

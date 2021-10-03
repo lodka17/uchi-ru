@@ -547,3 +547,13 @@ select {
   font-feature-settings: 'tnum' on, 'lnum' on, 'cv03' on, 'cv04' on;
   color: #D2D8E2;
 }
+.ant-select-selection-item {
+  margin-top: 7px !important;
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  color: #111924;
+}
