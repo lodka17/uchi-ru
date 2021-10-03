@@ -51,7 +51,6 @@ h1 {
   margin: 0.67em 0;
 }
 
-
 p {
   margin: 0;
   padding: 0;
@@ -520,13 +519,12 @@ select {
   }
 }
 
-
 ///////////////////////////////////////////////
 //fix antd design
 
 .ant-select-selector {
-  background: #F2F5F9!important;
-  border-radius: 8px 8px 0 0!important;
+  background: #f2f5f9 !important;
+  border-radius: 8px 8px 0 0 !important;
   height: 48px !important;
 }
 .ant-select-selection-placeholder {
@@ -544,8 +542,8 @@ select {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  font-feature-settings: 'tnum' on, 'lnum' on, 'cv03' on, 'cv04' on;
-  color: #D2D8E2;
+  font-feature-settings: "tnum" on, "lnum" on, "cv03" on, "cv04" on;
+  color: #d2d8e2;
 }
 .ant-select-selection-item {
   margin-top: 7px !important;
@@ -554,7 +552,7 @@ select {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  font-feature-settings: 'tnum' on, 'lnum' on;
+  font-feature-settings: "tnum" on, "lnum" on;
   color: #111924;
 }
 .ant-select-selection-placeholder {
