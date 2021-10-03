@@ -2,8 +2,8 @@ import React, { useState, useReducer } from "react";
 import { Registration } from "../../components/Registration";
 import { observer } from "mobx-react-lite";
 import { useHistory } from "react-router-dom";
-
-export const RegistrationBL = () => {
+import { userStore } from "../../store/auth/AuthStore";
+export const RegistrationBL = observer(() => {
   const history = useHistory();
   const [isAuthorized, dispatch] = useReducer((isAuth) => !isAuth, false);
   const [state, setState] = useState({
@@ -16,13 +16,13 @@ export const RegistrationBL = () => {
   });
 
   const handleOnSubmit = () => {
-    // const cb = isAuthorized ? userStore.auth : userStore.register;
-    // cb(state);
-    // if (!isAuthorized) {
-    //   dispatch();
-    //   return;
-    // }
-    // history.push("./help");
+    const cb = isAuthorized ? userStore.auth : userStore.register;
+    cb(state);
+    if (!isAuthorized) {
+      dispatch();
+      return;
+    }
+    history.push("./help");
   };
 
   const handleOnChange = ({ target }) => {
@@ -41,4 +41,4 @@ export const RegistrationBL = () => {
       setIsAuthorized={dispatch}
     />
   );
-};
+});
