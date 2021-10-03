@@ -2,9 +2,9 @@
 import { Button } from "antd";
 import { observer } from "mobx-react-lite";
 import React, { useEffect } from "react";
-import "./App.scss";
 import "antd/dist/antd.css";
 import "./assets/fonts/fonts.css";
+import "./App.scss";
 // import calendar from "./calendar.svg";
 // import { InfoBlock } from "./components-ui/InfoBlock/InfoBlock";
 import { Progress } from "./components-ui/Progress";

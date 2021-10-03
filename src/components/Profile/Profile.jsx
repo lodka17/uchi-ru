@@ -5,36 +5,49 @@ import { Award } from "../../components-ui/Award/Award";
 import { MarginGroup } from "../../components-ui/MarginGroup";
 import { Progress } from "../../components-ui/Progress/Progress";
 import { InfoCard } from "../../components/InfoCard";
-import calendar from "./calendar.svg";
 import styles from "./styles.module.scss";
+
+import calendar from "../../assets/icons/calendar.svg";
+import ring from "../../assets/icons/ring.svg";
+import star from "../../assets/icons/star.svg";
+import instruments from "../../assets/icons/instruments.svg";
+
+import avatar2 from "../../assets/icons/avatar2.svg";
+
+import award1 from "../../assets/icons/award1.svg";
+import award2 from "../../assets/icons/award2.svg";
+import award3 from "../../assets/icons/award3.svg";
+import award4 from "../../assets/icons/award4.svg";
+
+import fac from "../../assets/icons/fac.svg";
 
 const statistics = { solved: 10, given: 20 };
 
 const faculty = {
   "id": 3,
-  "name": "faculty3",
+  "name": "Печеньки",
   "score": 0,
-  image: calendar,
+  image: fac,
 };
 
 const awards = [
-  { "id": 1, "name": "первый вопрос", "text": "ыавпавртпа", "image": calendar },
-  { "id": 2, "name": "первый вопрос", "text": "ыавпавртпа", "image": calendar },
-  { "id": 3, "name": "первый вопрос", "text": "ыавпавртпа", "image": calendar },
-  { "id": 4, "name": "первый вопрос", "text": "ыавпавртпа", "image": calendar },
+  { "id": 1, "name": "Только вперед", "text": "ыавпавртпа", "image": award1 },
+  { "id": 2, "name": "Выживший", "text": "ыавпавртпа", "image": award2 },
+  { "id": 3, "name": "Гуру во всем", "text": "ыавпавртпа", "image": award3 },
+  { "id": 4, "name": "Ты сделал невозможное", "text": "ыавпавртпа", "image": award4 },
 ];
 
 const blocks = [
   { img: calendar, name: "brth", value: "11.12.2021", title: "Дата рождения" },
-  { img: calendar, name: "username", value: "8 900 000 000 00", title: "Номер телефона" },
-  { img: calendar, name: "email", value: "KonstantinK@mail.ru", title: "Email" },
-  { img: calendar, name: "inst", value: "KonstantinK009", title: "Instagram" },
+  { img: ring, name: "username", value: "8 900 000 000 00", title: "Номер телефона" },
+  { img: star, name: "email", value: "KonstantinK@mail.ru", title: "Email" },
+  { img: instruments, name: "inst", value: "KonstantinK009", title: "Instagram" },
 ];
 
 export const Profile = ({ procent, level }) => (
   <div className={styles.profile}>
     <InfoCard
-      img={calendar}
+      img={avatar2}
       age={"15"}
       lastname="Константинович"
       firstname="Константин"
