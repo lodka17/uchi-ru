@@ -6,6 +6,9 @@ import like from "../../assets/icons/like.svg";
 import mark from "../../assets/icons/mark.svg";
 import titlesStyle from "../Help/styles.module.scss";
 import styles from "./styles.module.scss";
+import avatar1 from "../../assets/icons/avatar1.svg";
+import avatar2 from "../../assets/icons/avatar2.svg";
+import avatar3 from "../../assets/icons/avatar3.svg";
 
 export const Answers = () => {
   const answers = 45;
@@ -15,7 +18,7 @@ export const Answers = () => {
       <p className={titlesStyle.titles}> Заданный вопрос </p>
       <Select
         showSearch
-        style={{ width: 695, marginBottom: 42 }}
+        style={{ width: 695, marginBottom: 42, marginTop: 12 }}
         placeholder="Search to Select"
         optionFilterProp="children"
         filterOption={(input, option) =>
@@ -30,7 +33,7 @@ export const Answers = () => {
       <p className={titlesStyle.titles}> Предмет </p>
       <Select
         showSearch
-        style={{ width: 695, marginBottom: 42 }}
+        style={{ width: 695, marginBottom: 42, marginTop: 12 }}
         placeholder="Search to Select"
         optionFilterProp="children"
         filterOption={(input, option) =>
@@ -48,7 +51,7 @@ export const Answers = () => {
       </div>
       <div className={styles.container}>
         <div className={styles.answersContainer}>
-          <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          <Avatar src={avatar1} />
           <div className={styles.flex}>
             <p className={styles.name}> Марина Лукшина </p>
             <p className={styles.text}>
@@ -60,15 +63,67 @@ export const Answers = () => {
         <div className={styles.utils}>
           <div className={styles.column}>
             <img src={like} />
-            <p>Лайк</p>
+            <p className={styles.utilsTitle}>Лайк</p>
           </div>
-          <div>
+          <div className={styles.column}>
             <img className={styles.img} src={chat} />
-            <p>Чат</p>
+            <p className={styles.utilsTitle}>Чат</p>
           </div>
-          <div>
+          <div className={styles.column}>
             <img src={mark} />
-            <p>Оценка</p>
+            <p className={styles.utilsTitle}>Оценка</p>
+          </div>
+        </div>
+      </div>
+      <div className={styles.container}>
+        <div className={styles.answersContainer}>
+          <Avatar src={avatar3} />
+          <div className={styles.flex}>
+            <p className={styles.name}> Елизавета Тихомирова </p>
+            <p className={styles.text}>
+              Древнерусское государство в Восточной Европе, возникшее в последней четверти IX в. в
+              результате объединения под властью князей
+            </p>
+          </div>
+        </div>
+        <div className={styles.utils}>
+          <div className={styles.column}>
+            <img src={like} />
+            <p className={styles.utilsTitle}>Лайк</p>
+          </div>
+          <div className={styles.column}>
+            <img className={styles.img} src={chat} />
+            <p className={styles.utilsTitle}>Чат</p>
+          </div>
+          <div className={styles.column}>
+            <img src={mark} />
+            <p className={styles.utilsTitle}>Оценка</p>
+          </div>
+        </div>
+      </div>
+      <div className={styles.container}>
+        <div className={styles.answersContainer}>
+          <Avatar src={avatar2} />
+          <div className={styles.flex}>
+            <p className={styles.name}> Константин Неёлов </p>
+            <p className={styles.text}>
+              Государство возникшее в последней четверти IX в. в результате объединения под властью
+              князей
+            </p>
+          </div>
+        </div>
+        <div className={styles.utils}>
+          <div className={styles.column}>
+            <img src={like} />
+            <p className={styles.utilsTitle}>Лайк</p>
+          </div>
+          <div className={styles.column}>
+            <img className={styles.img} src={chat} />
+            <p className={styles.utilsTitle}>Чат</p>
+          </div>
+          <div className={styles.column}>
+            <img src={mark} />
+            <p className={styles.utilsTitle}>Оценка</p>
           </div>
         </div>
       </div>
