@@ -8,24 +8,27 @@ const api = new UserAPI();
 class AuthStore {
   isAuth: boolean = false;
   user: User = null;
+  token: string = ''
 
   constructor() {
     makeAutoObservable(this);
   }
 
-  register = async (userData: Register.Payload) => {
+  async register(userData: Register.Payload) {
     try {
       await api.register(userData);
     } catch (error) {
-      this.isAuth = false;
+      console.log(error);
+      this.token = user.token
+      this.isAuth = false
     }
-  };
+  }
 
-  auth = async (userData: Auth.Payload) => {
+  async auth(userData: Auth.Payload) {
     try {
       const user = await api.auth(userData);
-      this.user = user;
-      this.isAuth = true;
+      this.user = user
+      this.isAuth = true
     } catch (error) {
       this.isAuth = false;
     }
