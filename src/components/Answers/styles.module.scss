@@ -21,7 +21,7 @@
   box-sizing: border-box;
   border-radius: 4px;
   width: 693px;
-  height: 116px;
+  height: min-content;
   padding: 14px;
 }
 .flex {
@@ -63,12 +63,13 @@
 .container {
   display: flex;
   flex-direction: row;
+  margin-top: 24px;
 }
 .utils {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 15px;
+  padding: 15px 15px 15px 15px;
   margin-left: 24px;
   width: 208px;
   height: 71px;
@@ -83,4 +84,15 @@
 }
 .column {
   align-items: center;
+  > img {
+    margin: auto;
+  }
+}
+.utilsTitle {
+  font-family: Montserrat-Regular;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  color: #5A7494;
 }

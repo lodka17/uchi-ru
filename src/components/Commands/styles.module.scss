@@ -106,7 +106,7 @@
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 .user {
   margin-left: 12px;
@@ -116,4 +116,9 @@
   line-height: 20px;
   font-feature-settings: 'tnum' on, 'lnum' on, 'cv03' on, 'cv04' on;
   color: #111924;
+}
+.center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
