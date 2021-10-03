@@ -1,7 +1,7 @@
 import { Select, Slider, Input, TimePicker, DatePicker, Switch, Tag } from "antd";
 import { Option } from "antd/es/mentions";
 import moment from "moment";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../../components-ui/Button";
 import titlesStyle from "../Help/styles.module.scss";
 import styles from "./styles.module.scss";
@@ -45,6 +45,9 @@ export const Questions = () => {
   function onChangeSwitch(checked) {
     console.log(`switch to ${checked}`);
   }
+
+  const [isTheme, setIsTheme] = useState(false);
+
   return (
     <div className={styles.wrapper}>
       <p className={styles.header}>Задай свой вопрос</p>
@@ -64,7 +67,13 @@ export const Questions = () => {
                 optionA.children.toLowerCase().localeCompare(optionB.children.toLowerCase())
               }
             >
-              <Option value="1">Not Identified</Option>
+              <Option value="1">Биология</Option>
+              <Option value="1">История</Option>
+              <Option value="2">Математика</Option>
+              <Option value="3">География</Option>
+              <Option value="4">Астрономия</Option>
+              <Option value="5">Физика</Option>
+              <Option value="6">Геометрия</Option>
             </Select>
           </div>
           <p className={titlesStyle.titles}> Задать вопрос </p>
@@ -95,6 +104,7 @@ export const Questions = () => {
           <div className={styles.themeSelect}>
             <Select
               showSearch
+              onChange={() => setIsTheme(true)}
               style={{ width: 695, marginBottom: 42 }}
               placeholder="Тема"
               optionFilterProp="children"
@@ -105,15 +115,23 @@ export const Questions = () => {
                 optionA.children.toLowerCase().localeCompare(optionB.children.toLowerCase())
               }
             >
-              <Option value="1">Not Identified</Option>
+              <Option value="1">История Франции</Option>
+              <Option value="2">История России</Option>
+              <Option value="3">История Китая</Option>
+              <Option value="4">История Великобритании</Option>
             </Select>
           </div>
-          <p className={titlesStyle.titles}> Возможные темы </p>
-          <div className={styles.tags}>
-            <Tag className={styles.tag}>Вторая мировая война</Tag>
-            <Tag className={styles.tag}>Холодная война</Tag>
-            <Tag className={styles.tag}>Первая мировая война</Tag>
-          </div>
+          {isTheme && (
+            <>
+              {" "}
+              <p className={titlesStyle.titles}> Возможные темы </p>
+              <div className={styles.tags}>
+                <Tag className={styles.tag}>Вторая мировая война</Tag>
+                <Tag className={styles.tag}>Холодная война</Tag>
+                <Tag className={styles.tag}>Первая мировая война</Tag>
+              </div>
+            </>
+          )}
         </div>
       </div>
       <Button className={styles.button}>Задать вопрос</Button>
