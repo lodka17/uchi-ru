@@ -74,7 +74,7 @@ const Container = ({ avatar, name, text }) => {
               <Like key={el.id} {...el} activeId={isActiveLike} onClick={handleOnClick} />
             ))}
           </div>
-          <p onClick={!isActiveLike ? dispatch : () => {}}>Оценить</p>
+          <p onClick={dispatch}>Оценить</p>
         </MarginGroup>
         <div className={styles.mainBtn}>
           <div className={styles.column}>

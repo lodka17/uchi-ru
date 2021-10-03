@@ -129,7 +129,6 @@
   width: 420px;
   background-color: $lightGray;
   border-radius: 6px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 20px;
@@ -139,6 +138,10 @@
   position: absolute;
   transition: ease-out 1s;
   z-index: 0;
+
+  & > p {
+    color: #006df0;
+  }
 }
 
 .toggle {
