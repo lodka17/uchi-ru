@@ -80,7 +80,7 @@ export const Questions = () => {
             <div className={titlesStyle.timeContainer}>
               <TimePicker placeholder="00:00" format={format} />
               <DatePicker placeholder="21.05.2015" onChange={onChange} />
-              <Switch defaultChecked onChange={onChangeSwitch} />
+              <Switch className={styles.switch} defaultChecked onChange={onChangeSwitch} />
               <span className={styles.quick}>Срочно</span>
             </div>
             <span className={titlesStyle.hint}>
@@ -92,20 +92,22 @@ export const Questions = () => {
         </div>
         <div className={styles.theme}>
           <p className={titlesStyle.titles}> Тема </p>
-          <Select
-            showSearch
-            style={{ width: 695, marginBottom: 42 }}
-            placeholder="Тема"
-            optionFilterProp="children"
-            filterOption={(input, option) =>
-              option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-            }
-            filterSort={(optionA, optionB) =>
-              optionA.children.toLowerCase().localeCompare(optionB.children.toLowerCase())
-            }
-          >
-            <Option value="1">Not Identified</Option>
-          </Select>
+          <div className={styles.themeSelect}>
+            <Select
+              showSearch
+              style={{ width: 695, marginBottom: 42 }}
+              placeholder="Тема"
+              optionFilterProp="children"
+              filterOption={(input, option) =>
+                option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+              }
+              filterSort={(optionA, optionB) =>
+                optionA.children.toLowerCase().localeCompare(optionB.children.toLowerCase())
+              }
+            >
+              <Option value="1">Not Identified</Option>
+            </Select>
+          </div>
           <p className={titlesStyle.titles}> Возможные темы </p>
           <div className={styles.tags}>
             <Tag className={styles.tag}>Вторая мировая война</Tag>

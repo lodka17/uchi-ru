@@ -27,6 +27,7 @@
 }
 .input {
   margin-bottom: 42px;
+  font-family: Montserrat-Regular !important;
 }
 .button {
   background: $uiMinGreen;
@@ -43,8 +44,10 @@
   }
 }
 .select {
-  //background: red;
-
+  margin-top: 12px;
+}
+.themeSelect {
+  margin-top: 12px;
 }
 .inputText {
   background: #F2F5F9!important;
@@ -53,6 +56,7 @@
   width: 795px;
 }
 .slider {
+  margin-top: 30px;
   width: 800px;
   margin-bottom: 56px;
 }
@@ -74,4 +78,14 @@
   border-radius: 12px;
   text-align: center;
   padding-top: 3px;
+  font-family: Montserrat-Regular;
+  font-size: 13px;
+  line-height: 20px;
+  color: #2487FF;
+}
+.ant-switch-checked {
+  background: #00BD93;
+}
+.switch {
+  background: #00BD93;
 }
