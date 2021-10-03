@@ -193,10 +193,6 @@ export const Help = () => {
                   <Option value="6">Cancelled</Option>
                 </Select>
               </div>
-              <div>
-                <p className={styles.titles}> Выбрать дату </p>
-                <RangePicker />
-              </div>
             </div>
             <p className={styles.titles}> Количество баллов </p>
             <div className={styles.slider}>

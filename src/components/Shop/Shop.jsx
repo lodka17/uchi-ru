@@ -16,7 +16,7 @@ export const Shop = () => {
           <p className={styles.cashTitle}>Мои U coin</p>
           <MarginGroup gap={21} className={styles.cashValue}>
             <img src={coinSvg} alt="coin" />
-            <p>{30}</p>
+            <span>{30}</span>
           </MarginGroup>
         </div>
       </div>
