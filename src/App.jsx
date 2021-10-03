@@ -1,24 +1,33 @@
-import React from "react";
-import "./App.scss";
+/* eslint-disable */
+import { Button } from "antd";
+import { observer } from "mobx-react-lite";
+import React, { useEffect } from "react";
+
 import "antd/dist/antd.css";
 import "./assets/fonts/fonts.css";
-// import { RegistrationBL } from "./components-bl/RegistrationBL/RegistrationBL";
-// import { Registration } from "./components-bl/Registration/";
-// import { StartingPage } from "./components-bl/StartingPage/StartingPage";
+import "./App.scss";
 import { BrowserRouter } from "react-router-dom";
 import { Header } from "./components/Header/Header";
-// import { History } from "./components/History/History";
 import { Routing } from "./components/Routing/Routing";
+// import { userStore } from "./store/auth/AuthStore";
 
 //   <History />
+const App = () => {
+  // useEffect(() => {
+  //   userStore.auth({
+  //     "username": "test88",
+  //     "password": "qsc_user@1",
+  //   });
+  // }, []);
 
-const App = () => (
-  <div className="App">
-    <BrowserRouter>
-      <Header showMark={true} />
-      <Routing />
-    </BrowserRouter>
-  </div>
-);
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Header showMark={true} />
+        <Routing />
+      </BrowserRouter>
+    </div>
+  );
+};
 
 export default App;

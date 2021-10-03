@@ -51,6 +51,11 @@ h1 {
   margin: 0.67em 0;
 }
 
+
+p {
+  margin: 0;
+  padding: 0;
+}
 /* Grouping content
      ========================================================================== */
 /**
@@ -513,4 +518,32 @@ select {
       stroke: #fff !important;
     }
   }
+}
+
+
+///////////////////////////////////////////////
+//fix antd design
+
+.ant-select-selector {
+  background: #F2F5F9!important;
+  border-radius: 8px 8px 0 0!important;
+  height: 48px !important;
+}
+.ant-select-selection-placeholder {
+  margin-top: 8px !important;
+}
+.ant-select-selection-search-input {
+  margin-top: 8px !important;
+}
+.ant-picker-suffix {
+  display: none;
+}
+.ant-picker-input > input {
+  text-align: center !important;
+  font-family: Montserrat-Regular;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  font-feature-settings: 'tnum' on, 'lnum' on, 'cv03' on, 'cv04' on;
+  color: #D2D8E2;
 }

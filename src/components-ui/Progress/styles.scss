@@ -1,0 +1,95 @@
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100px 0;
+  }
+}
+
+@keyframes auto-progress {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  // background-color: #1a1a1a;
+  height: 48px;
+  border-radius: 13px;
+  // box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+}
+
+.stripes {
+  background-size: 25px 48px;
+  background-image: linear-gradient(
+    105deg,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    #cce2fc,
+    #cce2fc,
+    #cce2fc,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    transparent,
+    transparent
+  );
+}
+// #98edfd,
+// transparent,
+// #98edfd,
+// transparent,
+// #98edfd,
+// transparent,
+// #98edfd,
+// transparent,
+// #98edfd,
+// transparent,
+// #98edfd,
+// transparent,
+// #98edfd
+.stripes.animated {
+  animation: animate-stripes 1s linear infinite;
+}
+
+.stripes.animated.slower {
+  animation-duration: 1.25s;
+}
+
+.stripes.reverse {
+  animation-direction: reverse;
+}
+
+.progress-bar-inner {
+  display: block;
+  height: 48px;
+  background-color: #cce2fc;
+  border-radius: 3px;
+  // box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+
+  // animation: auto-progress 10s infinite linear;
+}
+
+.progress-bar-level {
+  color: #111;
+  padding: 8px 48px;
+  font-family: Montserrat-Bold;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  height: 48px;
+}

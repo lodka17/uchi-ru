@@ -9,15 +9,20 @@ import { Title } from "../../components-ui/Title/";
 import styles from "./styles.module.scss";
 
 const registrationFields = [
-  { placeholder: "Фамилия", name: "lastname" },
-  { placeholder: "Имя", name: "firstname" },
-  { placeholder: "Отчество", name: "midlename" },
-  { placeholder: "Номер телефона", name: "phone" },
+  { placeholder: "Фамилия", name: "last_name" },
+  { placeholder: "Имя", name: "first_name" },
+  { placeholder: "Отчество", name: "middle_name" },
+  { placeholder: "Номер телефона", name: "username" },
 ];
 
-export const Registration = ({ onChange, state, onRemember }) => {
-  // eslint-disable-next-line no-unused-vars
-  const [isAuthorized, setIsAuthorized] = useState(false);
+export const Registration = ({
+  onChange,
+  state,
+  onRemember,
+  onSubmit,
+  isAuthorized,
+  setIsAuthorized,
+}) => {
   return (
     <div className={styles.registration}>
       <MarginGroup isColumn className={styles.form}>
@@ -49,9 +54,12 @@ export const Registration = ({ onChange, state, onRemember }) => {
                 size="large"
               />
             </MarginGroup>
-            <Button onClick={() => setIsAuthorized(!isAuthorized)} className={styles.button}>
+            <Button onClick={onSubmit} className={styles.button}>
               Присоединиться
             </Button>
+            <p className={styles.remember} onClick={setIsAuthorized}>
+              Уже зарегестрирован?
+            </p>
           </>
         )}
         {isAuthorized && (
@@ -62,8 +70,9 @@ export const Registration = ({ onChange, state, onRemember }) => {
                 className={styles.input}
                 type="text"
                 onChange={onChange}
-                name={"Телефон"}
+                name="username"
                 placeholder={"Номер телефона"}
+                value={state.username}
                 allowClear
                 size="large"
               />
@@ -72,11 +81,13 @@ export const Registration = ({ onChange, state, onRemember }) => {
                 onChange={onChange}
                 name="password"
                 placeholder="Пароль"
-                value={state["password"]}
+                value={state.password}
                 allowClear
                 size="large"
               />
-              <Button className={styles.button}>Войти</Button>
+              <Button onClick={onSubmit} className={styles.button}>
+                Войти
+              </Button>
               <p className={styles.remember} onClick={onRemember}>
                 Забыли логин или пароль ?
               </p>

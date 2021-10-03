@@ -5,14 +5,38 @@ import React from "react";
 import { Button } from "../../components-ui/Button";
 import titlesStyle from "../Help/styles.module.scss";
 import styles from "./styles.module.scss";
-
 export const Questions = () => {
   const marks = {
-    0: "1",
-    1: "2",
-    2: "3",
-    3: "4",
-    4: "5",
+    0: {
+      style: {
+        color: "#5A7494",
+      },
+      label: <strong>0</strong>,
+    },
+    1: {
+      style: {
+        color: "#5A7494",
+      },
+      label: <strong>1</strong>,
+    },
+    2: {
+      style: {
+        color: "#5A7494",
+      },
+      label: <strong>2</strong>,
+    },
+    3: {
+      style: {
+        color: "#5A7494",
+      },
+      label: <strong>3</strong>,
+    },
+    4: {
+      style: {
+        color: "#5A7494",
+      },
+      label: <strong>4</strong>,
+    },
   };
   const format = "HH:mm";
   function onChange(date, dateString) {
@@ -27,35 +51,37 @@ export const Questions = () => {
       <div className={styles.flex}>
         <div className={styles.question}>
           <p className={titlesStyle.titles}> Предмет </p>
-          <Select
-            showSearch
-            style={{ width: 695, marginBottom: 42 }}
-            placeholder="Search to Select"
-            optionFilterProp="children"
-            filterOption={(input, option) =>
-              option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-            }
-            filterSort={(optionA, optionB) =>
-              optionA.children.toLowerCase().localeCompare(optionB.children.toLowerCase())
-            }
-          >
-            <Option value="1">Not Identified</Option>
-          </Select>
+          <div className={styles.select}>
+            <Select
+              showSearch
+              style={{ width: 795, marginBottom: 42 }}
+              placeholder="Предмет"
+              optionFilterProp="children"
+              filterOption={(input, option) =>
+                option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+              }
+              filterSort={(optionA, optionB) =>
+                optionA.children.toLowerCase().localeCompare(optionB.children.toLowerCase())
+              }
+            >
+              <Option value="1">Not Identified</Option>
+            </Select>
+          </div>
           <p className={titlesStyle.titles}> Задать вопрос </p>
           <div className={styles.input}>
-            <Input placeholder="Basic usage" />
+            <Input placeholder="Задайте вопрос" className={styles.inputText} />
           </div>
           <p className={titlesStyle.titles}> Сложность вопроса </p>
-          <div className={titlesStyle.slider}>
+          <div className={styles.slider}>
             <Slider marks={marks} step={null} defaultValue={0} max={4} />
           </div>
           <p className={titlesStyle.titles}> Время </p>
           <div className={titlesStyle.timeModule}>
             <div className={titlesStyle.timeContainer}>
-              <TimePicker defaultValue={moment("12:08", format)} format={format} />
-              <DatePicker onChange={onChange} />
+              <TimePicker placeholder="00:00" format={format} />
+              <DatePicker placeholder="21.05.2015" onChange={onChange} />
               <Switch defaultChecked onChange={onChangeSwitch} />
-              <span>Срочно</span>
+              <span className={styles.quick}>Срочно</span>
             </div>
             <span className={titlesStyle.hint}>
               Меняй время, если тебе нужен ответ
@@ -69,7 +95,7 @@ export const Questions = () => {
           <Select
             showSearch
             style={{ width: 695, marginBottom: 42 }}
-            placeholder="Search to Select"
+            placeholder="Тема"
             optionFilterProp="children"
             filterOption={(input, option) =>
               option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
@@ -81,10 +107,10 @@ export const Questions = () => {
             <Option value="1">Not Identified</Option>
           </Select>
           <p className={titlesStyle.titles}> Возможные темы </p>
-          <div>
-            <Tag color="magenta">magenta</Tag>
-            <Tag color="red">red</Tag>
-            <Tag color="volcano">volcano</Tag>
+          <div className={styles.tags}>
+            <Tag className={styles.tag}>Вторая мировая война</Tag>
+            <Tag className={styles.tag}>Холодная война</Tag>
+            <Tag className={styles.tag}>Первая мировая война</Tag>
           </div>
         </div>
       </div>
