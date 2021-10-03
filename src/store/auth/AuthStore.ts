@@ -20,6 +20,7 @@ class AuthStore {
     } catch (error) {
       console.log(error);
       this.token = ''
+      localStorage.setItem('token', '')
       this.isAuth = false
     }
   }
@@ -30,8 +31,10 @@ class AuthStore {
       this.user = user
       this.isAuth = true
       this.token = user.token
+      localStorage.setItem('token', this.token)
     } catch (error) {
       this.token = ''
+      localStorage.setItem('token', '')
       this.isAuth = false;
     }
   };

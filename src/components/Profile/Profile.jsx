@@ -31,16 +31,16 @@ const blocks = [
   { img: calendar, name: "inst", value: "KonstantinK009", title: "Instagram" },
 ];
 
-export const Profile = ({ procent, level }) => (
+export const Profile = ({ user, procent, level }) => (
   <div className={styles.profile}>
     <InfoCard
       img={calendar}
-      age={"15"}
-      lastname="Константинович"
-      firstname="Константин"
-      middlename="Константинопольский"
-      status="Ученик"
-      coin="10"
+      age={user?.birthday ?? ''}
+      lastname={user?.lastname ?? ''}
+      firstname={user?.first_name ?? ''}
+      middlename={user?.middle_name ?? ''}
+      status={user?.role ? "Ученик" : "Учитель"}
+      coin={user?.y_coin ?? ''}
       blocks={blocks}
     />
     <MarginGroup className={styles.data}>

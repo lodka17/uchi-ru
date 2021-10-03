@@ -4,6 +4,7 @@ import { observer } from "mobx-react-lite";
 import { Profile } from "../../components/Profile";
 // import { userStore } from "../../store/auth/AuthStore";
 // import { useHistory } from "react-router-dom";
+import {userStore} from "../../store/auth/AuthStore";
 
 export const ProfileBL = observer(() => {
   // const history = useHistory();
@@ -34,5 +35,5 @@ export const ProfileBL = observer(() => {
   //     });
   // };
 
-  return <Profile />;
+  return <Profile info={userStore.user}/>;
 });
