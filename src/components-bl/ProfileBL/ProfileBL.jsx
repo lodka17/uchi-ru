@@ -34,5 +34,5 @@ export const ProfileBL = observer(() => {
   //     });
   // };
 
-  return <Profile />;
+  return <Profile procent={"40%"} level={"13.38"} />;
 });

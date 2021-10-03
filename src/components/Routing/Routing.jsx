@@ -18,9 +18,6 @@ export const Routing = () => (
     <Route exact path="/help">
       <Help />
     </Route>
-    <Route exact path="/chat">
-      <div>Чат</div>
-    </Route>
     <Route exact path="/faculties">
       <Commands />
     </Route>
@@ -36,7 +33,6 @@ export const Routing = () => (
     <Route exact path="/answers">
       <Answers />
     </Route>
-
     <Route exact path="/register">
       <RegistrationBL />
     </Route>

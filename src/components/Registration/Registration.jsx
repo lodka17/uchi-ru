@@ -7,6 +7,7 @@ import { Button } from "../../components-ui/Button/";
 import { MarginGroup } from "../../components-ui/MarginGroup/";
 import { Title } from "../../components-ui/Title/";
 import styles from "./styles.module.scss";
+import { useHistory } from "react-router-dom";
 
 const registrationFields = [
   { placeholder: "Фамилия", name: "last_name" },
@@ -23,6 +24,7 @@ export const Registration = ({
   isAuthorized,
   setIsAuthorized,
 }) => {
+  const history = useHistory();
   return (
     <div className={styles.registration}>
       <MarginGroup isColumn className={styles.form}>
@@ -85,7 +87,7 @@ export const Registration = ({
                 allowClear
                 size="large"
               />
-              <Button onClick={onSubmit} className={styles.button}>
+              <Button onClick={() => history.push("./profile")} className={styles.button}>
                 Войти
               </Button>
               <p className={styles.remember} onClick={onRemember}>

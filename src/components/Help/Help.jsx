@@ -1,10 +1,12 @@
 import { Tabs, Select, Slider, TimePicker, DatePicker, Switch, Avatar } from "antd";
 import moment from "moment";
 import React from "react";
-import key from "weak-key";
 import { Button } from "../../components-ui/Button";
 import buttonStyle from "../StartingForm/styles.module.scss";
 import styles from "./styles.module.scss";
+import avatar2 from "../../assets/icons/avatar2.svg";
+import avatar3 from "../../assets/icons/avatar3.svg";
+import avatar1 from "../../assets/icons/avatar1.svg";
 
 export const Help = () => {
   const { TabPane } = Tabs;
@@ -96,7 +98,7 @@ export const Help = () => {
             <Select
               showSearch
               style={{ width: 695, marginBottom: 42 }}
-              placeholder="Search to Select"
+              placeholder="Выберите тему"
               optionFilterProp="children"
               filterOption={(input, option) =>
                 option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
@@ -105,18 +107,16 @@ export const Help = () => {
                 optionA.children.toLowerCase().localeCompare(optionB.children.toLowerCase())
               }
             >
-              <Option value="1">Not Identified</Option>
-              <Option value="2">Closed</Option>
-              <Option value="3">Communicated</Option>
-              <Option value="4">Identified</Option>
-              <Option value="5">Resolved</Option>
-              <Option value="6">Cancelled</Option>
+              <Option value="1">Проблемы с доступами</Option>
+              <Option value="2">Проблемы с авторизацией</Option>
+              <Option value="3">Проблемы с сайтом</Option>
+              <Option value="4">Проблемы с успеваемостью</Option>
             </Select>
             <p className={styles.titles}> Список вопросов </p>
             <Select
               showSearch
               style={{ width: 695, marginBottom: 42 }}
-              placeholder="Search to Select"
+              placeholder="Выберите предмет"
               optionFilterProp="children"
               filterOption={(input, option) =>
                 option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
@@ -126,11 +126,6 @@ export const Help = () => {
               }
             >
               <Option value="1">Not Identified</Option>
-              <Option value="2">Closed</Option>
-              <Option value="3">Communicated</Option>
-              <Option value="4">Identified</Option>
-              <Option value="5">Resolved</Option>
-              <Option value="6">Cancelled</Option>
             </Select>
             <p className={styles.titles}> Сложность вопроса </p>
             <div className={styles.slider}>
@@ -140,7 +135,7 @@ export const Help = () => {
             <div className={styles.timeModule}>
               <div className={styles.timeContainer}>
                 <TimePicker defaultValue={moment("12:08", format)} format={format} />
-                <DatePicker onChange={onChange} />
+                <DatePicker disabledDate disabled className={styles.date} onChange={onChange} />
                 <Switch defaultChecked onChange={onChangeSwitch} />
                 <span>Срочно</span>
               </div>
@@ -198,10 +193,6 @@ export const Help = () => {
                   <Option value="6">Cancelled</Option>
                 </Select>
               </div>
-              <div>
-                <p className={styles.titles}> Выбрать дату </p>
-                <RangePicker />
-              </div>
             </div>
             <p className={styles.titles}> Количество баллов </p>
             <div className={styles.slider}>
@@ -221,12 +212,18 @@ export const Help = () => {
             </div>
             <p className={styles.titles}> Популярные консультанты </p>
             <div className={styles.consultants}>
-              {names.map((el) => (
-                <div className={styles.users} key={key(el)}>
-                  <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-                  {el.name}
-                </div>
-              ))}
+              <div className={styles.users}>
+                <Avatar src={avatar1} />
+                Мария Лукшина
+              </div>
+              <div className={styles.users}>
+                <Avatar src={avatar2} />
+                Неёлов Александр Валерьевич
+              </div>
+              <div className={styles.users}>
+                <Avatar src={avatar3} />
+                Рассказова Елизавета Тихомирова
+              </div>
             </div>
           </div>
         </TabPane>
