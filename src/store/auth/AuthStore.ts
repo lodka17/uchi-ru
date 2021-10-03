@@ -19,7 +19,7 @@ class AuthStore {
       await api.register(userData);
     } catch (error) {
       console.log(error);
-      this.token = user.token
+      this.token = ''
       this.isAuth = false
     }
   }
@@ -29,7 +29,9 @@ class AuthStore {
       const user = await api.auth(userData);
       this.user = user
       this.isAuth = true
+      this.token = user.token
     } catch (error) {
+      this.token = ''
       this.isAuth = false;
     }
   };
