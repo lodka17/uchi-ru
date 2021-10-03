@@ -18,16 +18,16 @@ import { Profile } from "./components/Profile";
 // import { History } from "./components/History/History";
 
 import { Routing } from "./components/Routing/Routing";
-import { userStore } from "./store/auth/AuthStore";
+// import { userStore } from "./store/auth/AuthStore";
 
 //   <History />
 const App = observer(() => {
-  useEffect(() => {
-    userStore.auth({
-      "username": "test88",
-      "password": "qsc_user@1",
-    });
-  }, []);
+  // useEffect(() => {
+  //   userStore.auth({
+  //     "username": "test88",
+  //     "password": "qsc_user@1",
+  //   });
+  // }, []);
 
   return (
     <div className="App">
